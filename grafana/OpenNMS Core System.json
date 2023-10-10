@@ -36443,7 +36443,7 @@
         },
         "datasource": {
           "type": "opennms-performance-datasource",
-          "uid": "ac186300-6dcd-4e0e-99d5-4ad49de46401"
+          "uid": "${dataSource}"
         },
         "definition": "nodeFilter(serviceName like 'OpenNMS-JVM')",
         "hide": 0,
