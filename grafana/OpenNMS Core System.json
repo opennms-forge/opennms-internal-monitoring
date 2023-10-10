@@ -23993,10 +23993,10 @@
         {
           "attribute": {
             "attribute": {
-              "label": "ONMSPollerTskQPCnt",
-              "name": "ONMSPollerTskQPCnt",
+              "label": "ONMSCollectTskQPCnt",
+              "name": "ONMSCollectTskQPCnt",
               "relativePath": "snmp/fs/selfmonitor/1/opennms-jvm",
-              "rrdFile": "ONMSPollerTskQPCnt.rrd"
+              "rrdFile": "ONMSCollectTskQPCnt.rrd"
             },
             "label": "pending",
             "node": {
@@ -25021,7 +25021,7 @@
           "refId": "A"
         }
       ],
-      "title": "Pollerd: Scheduler Queue",
+      "title": "Collectd: Scheduler Queue",
       "type": "stat"
     },
     {
