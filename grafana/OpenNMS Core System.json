@@ -8839,7 +8839,7 @@
           "refId": "C"
         }
       ],
-      "title": "Provisions Importer: Thread Pool",
+      "title": "Provisiond Importer: Thread Pool",
       "type": "bargauge"
     },
     {
@@ -20449,7 +20449,7 @@
           "refId": "C"
         }
       ],
-      "title": "Provisions Writer: Thread Pool",
+      "title": "Provisiond Writer: Thread Pool",
       "type": "bargauge"
     },
     {
@@ -27160,7 +27160,7 @@
           "refId": "C"
         }
       ],
-      "title": "Provisions Scan: Thread Pool",
+      "title": "Provisiond Scan: Thread Pool",
       "type": "bargauge"
     },
     {
@@ -31432,7 +31432,7 @@
           "refId": "C"
         }
       ],
-      "title": "Provisions Scheduler: Thread Pool",
+      "title": "Provisiond Scheduler: Thread Pool",
       "type": "bargauge"
     },
     {
