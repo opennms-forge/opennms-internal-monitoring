@@ -154,7 +154,7 @@
           "refId": "A"
         }
       ],
-      "title": "Nodes",
+      "title": "Nodes (24h)",
       "type": "stat"
     },
     {
@@ -162,7 +162,7 @@
         "type": "opennms-performance-datasource",
         "uid": "${dataSource}"
       },
-      "description": "",
+      "description": "Alarms processed in the last 24 hours.",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -275,7 +275,7 @@
           "refId": "A"
         }
       ],
-      "title": "Alarms",
+      "title": "Alarms (24h)",
       "type": "stat"
     },
     {
@@ -20457,7 +20457,7 @@
         "type": "opennms-performance-datasource",
         "uid": "${dataSource}"
       },
-      "description": "",
+      "description": "Events processed in the last 24 hours.",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -20570,7 +20570,7 @@
           "refId": "A"
         }
       ],
-      "title": "Events",
+      "title": "Events (24h)",
       "type": "stat"
     },
     {
@@ -20578,7 +20578,7 @@
         "type": "opennms-performance-datasource",
         "uid": "${dataSource}"
       },
-      "description": "",
+      "description": "Estimated Events in the whole database events table.",
       "fieldConfig": {
         "defaults": {
           "color": {
