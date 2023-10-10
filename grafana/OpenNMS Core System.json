@@ -41,7 +41,7 @@
         "type": "opennms-performance-datasource",
         "uid": "${dataSource}"
       },
-      "description": "",
+      "description": "Nodes added to the inventory in the last 24 hours.",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -20731,7 +20731,7 @@
               }
             ]
           },
-          "unit": "percent"
+          "unit": "percentunit"
         },
         "overrides": []
       },
@@ -21784,7 +21784,7 @@
             "type": "opennms-performance-datasource",
             "uid": "${dataSource}"
           },
-          "hide": true,
+          "hide": false,
           "performanceType": {
             "label": "Attribute",
             "value": 1
@@ -22814,7 +22814,7 @@
             "type": "opennms-performance-datasource",
             "uid": "${dataSource}"
           },
-          "hide": true,
+          "hide": false,
           "performanceType": {
             "label": "Attribute",
             "value": 1
@@ -22844,28 +22844,12 @@
         {
           "id": "calculateField",
           "options": {
-            "alias": "temp",
+            "alias": "usage",
             "binary": {
               "left": "use",
               "operator": "/",
               "reducer": "sum",
               "right": "total"
-            },
-            "mode": "binary",
-            "reduce": {
-              "reducer": "sum"
-            }
-          }
-        },
-        {
-          "id": "calculateField",
-          "options": {
-            "alias": "usage",
-            "binary": {
-              "left": "temp",
-              "operator": "*",
-              "reducer": "sum",
-              "right": "100"
             },
             "mode": "binary",
             "reduce": {
@@ -39016,7 +39000,7 @@
               },
               {
                 "id": "unit",
-                "value": "percent"
+                "value": "percentunit"
               },
               {
                 "id": "custom.axisSoftMax",
@@ -41182,29 +41166,12 @@
         {
           "id": "calculateField",
           "options": {
-            "alias": "temp",
+            "alias": "usage",
             "binary": {
               "left": "use",
               "operator": "/",
               "reducer": "sum",
               "right": "total"
-            },
-            "mode": "binary",
-            "reduce": {
-              "reducer": "sum"
-            },
-            "replaceFields": false
-          }
-        },
-        {
-          "id": "calculateField",
-          "options": {
-            "alias": "usage",
-            "binary": {
-              "left": "temp",
-              "operator": "*",
-              "reducer": "sum",
-              "right": "100"
             },
             "mode": "binary",
             "reduce": {
@@ -43469,8 +43436,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -46717,8 +46683,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -49961,8 +49926,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -52178,8 +52142,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -55422,8 +55385,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -57641,8 +57603,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -59890,8 +59851,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -62139,8 +62099,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -64358,8 +64317,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -67588,8 +67546,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -70818,8 +70775,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -74048,8 +74004,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
