@@ -28451,7 +28451,7 @@
       "type": "bargauge"
     },
     {
-      "collapsed": true,
+      "collapsed": false,
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -40432,7 +40432,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -40454,7 +40455,7 @@
                   },
                   {
                     "id": "unit",
-                    "value": "percent"
+                    "value": "percentunit"
                   },
                   {
                     "id": "custom.lineStyle",
@@ -40500,7 +40501,7 @@
             "h": 10,
             "w": 12,
             "x": 0,
-            "y": 29
+            "y": 11
           },
           "id": 8,
           "options": {
@@ -42583,20 +42584,6 @@
               "refId": "B"
             },
             {
-              "datasource": {
-                "type": "opennms-performance-datasource",
-                "uid": "${dataSource}"
-              },
-              "expression": "use / max * 100",
-              "hide": false,
-              "label": "usage",
-              "performanceType": {
-                "label": "Expression",
-                "value": 2
-              },
-              "refId": "C"
-            },
-            {
               "attribute": {
                 "attribute": {
                   "label": "ONMSPollsInFlight",
@@ -43629,6 +43616,24 @@
             }
           ],
           "title": "Thread Pool",
+          "transformations": [
+            {
+              "id": "calculateField",
+              "options": {
+                "alias": "usage",
+                "binary": {
+                  "left": "use",
+                  "operator": "/",
+                  "reducer": "sum",
+                  "right": "max"
+                },
+                "mode": "binary",
+                "reduce": {
+                  "reducer": "sum"
+                }
+              }
+            }
+          ],
           "type": "timeseries"
         },
         {
@@ -43679,7 +43684,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -43701,7 +43707,7 @@
                   },
                   {
                     "id": "unit",
-                    "value": "percent"
+                    "value": "percentunit"
                   },
                   {
                     "id": "custom.lineStyle",
@@ -43732,7 +43738,7 @@
             "h": 10,
             "w": 12,
             "x": 12,
-            "y": 29
+            "y": 11
           },
           "id": 9,
           "options": {
@@ -44776,6 +44782,7 @@
                 "type": "opennms-performance-datasource",
                 "uid": "${dataSource}"
               },
+              "hide": false,
               "performanceType": {
                 "label": "Attribute",
                 "value": 1
@@ -45813,20 +45820,6 @@
               "refId": "B"
             },
             {
-              "datasource": {
-                "type": "opennms-performance-datasource",
-                "uid": "${dataSource}"
-              },
-              "expression": "completed / total * 100",
-              "hide": false,
-              "label": "ratio",
-              "performanceType": {
-                "label": "Expression",
-                "value": 2
-              },
-              "refId": "C"
-            },
-            {
               "attribute": {
                 "attribute": {
                   "label": "ONMSPollerTskQPCnt",
@@ -46858,6 +46851,24 @@
             }
           ],
           "title": "Scheduler",
+          "transformations": [
+            {
+              "id": "calculateField",
+              "options": {
+                "alias": "ratio",
+                "binary": {
+                  "left": "completed",
+                  "operator": "/",
+                  "reducer": "sum",
+                  "right": "total"
+                },
+                "mode": "binary",
+                "reduce": {
+                  "reducer": "sum"
+                }
+              }
+            }
+          ],
           "type": "timeseries"
         }
       ],
@@ -46922,7 +46933,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -46944,7 +46956,7 @@
                   },
                   {
                     "id": "unit",
-                    "value": "percent"
+                    "value": "percentunit"
                   },
                   {
                     "id": "custom.lineStyle",
@@ -46990,7 +47002,7 @@
             "h": 10,
             "w": 12,
             "x": 0,
-            "y": 40
+            "y": 12
           },
           "id": 21,
           "options": {
@@ -49071,23 +49083,27 @@
                 "value": 1
               },
               "refId": "B"
-            },
-            {
-              "datasource": {
-                "type": "opennms-performance-datasource",
-                "uid": "${dataSource}"
-              },
-              "expression": "use / max * 100",
-              "hide": false,
-              "label": "usage",
-              "performanceType": {
-                "label": "Expression",
-                "value": 2
-              },
-              "refId": "C"
             }
           ],
           "title": "Thread Pool",
+          "transformations": [
+            {
+              "id": "calculateField",
+              "options": {
+                "alias": "usage",
+                "binary": {
+                  "left": "use",
+                  "operator": "/",
+                  "reducer": "sum",
+                  "right": "max"
+                },
+                "mode": "binary",
+                "reduce": {
+                  "reducer": "sum"
+                }
+              }
+            }
+          ],
           "type": "timeseries"
         },
         {
@@ -49138,7 +49154,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -49160,7 +49177,7 @@
                   },
                   {
                     "id": "unit",
-                    "value": "percent"
+                    "value": "percentunit"
                   },
                   {
                     "id": "custom.lineStyle",
@@ -49191,7 +49208,7 @@
             "h": 10,
             "w": 12,
             "x": 12,
-            "y": 40
+            "y": 12
           },
           "id": 22,
           "options": {
@@ -51272,20 +51289,6 @@
               "refId": "B"
             },
             {
-              "datasource": {
-                "type": "opennms-performance-datasource",
-                "uid": "${dataSource}"
-              },
-              "expression": "completed / total * 100",
-              "hide": false,
-              "label": "ratio",
-              "performanceType": {
-                "label": "Expression",
-                "value": 2
-              },
-              "refId": "C"
-            },
-            {
               "attribute": {
                 "attribute": {
                   "label": "ONMSCollectTskQPCnt",
@@ -52317,6 +52320,24 @@
             }
           ],
           "title": "Scheduler",
+          "transformations": [
+            {
+              "id": "calculateField",
+              "options": {
+                "alias": "ratio",
+                "binary": {
+                  "left": "completed",
+                  "operator": "/",
+                  "reducer": "sum",
+                  "right": "total"
+                },
+                "mode": "binary",
+                "reduce": {
+                  "reducer": "sum"
+                }
+              }
+            }
+          ],
           "type": "timeseries"
         }
       ],
@@ -52381,7 +52402,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -52403,7 +52425,7 @@
                   },
                   {
                     "id": "unit",
-                    "value": "percent"
+                    "value": "percentunit"
                   },
                   {
                     "id": "custom.lineStyle",
@@ -52423,8 +52445,7 @@
                     }
                   },
                   {
-                    "id": "custom.axisLabel",
-                    "value": ""
+                    "id": "max"
                   }
                 ]
               },
@@ -52449,7 +52470,7 @@
             "h": 10,
             "w": 6,
             "x": 0,
-            "y": 51
+            "y": 13
           },
           "id": 32,
           "options": {
@@ -54532,23 +54553,27 @@
                 "value": 1
               },
               "refId": "B"
-            },
-            {
-              "datasource": {
-                "type": "opennms-performance-datasource",
-                "uid": "${dataSource}"
-              },
-              "expression": "use / max * 100",
-              "hide": false,
-              "label": "usage",
-              "performanceType": {
-                "label": "Expression",
-                "value": 2
-              },
-              "refId": "C"
             }
           ],
           "title": "Importer Thread Pool",
+          "transformations": [
+            {
+              "id": "calculateField",
+              "options": {
+                "alias": "usage",
+                "binary": {
+                  "left": "use",
+                  "operator": "/",
+                  "reducer": "sum",
+                  "right": "max"
+                },
+                "mode": "binary",
+                "reduce": {
+                  "reducer": "sum"
+                }
+              }
+            }
+          ],
           "type": "timeseries"
         },
         {
@@ -54599,7 +54624,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -54621,7 +54647,7 @@
                   },
                   {
                     "id": "unit",
-                    "value": "percent"
+                    "value": "percentunit"
                   },
                   {
                     "id": "custom.lineStyle",
@@ -54697,7 +54723,7 @@
             "h": 10,
             "w": 6,
             "x": 6,
-            "y": 51
+            "y": 13
           },
           "id": 33,
           "options": {
@@ -56780,23 +56806,27 @@
                 "value": 1
               },
               "refId": "A"
-            },
-            {
-              "datasource": {
-                "type": "opennms-performance-datasource",
-                "uid": "${dataSource}"
-              },
-              "expression": "use / max * 100",
-              "hide": false,
-              "label": "usage",
-              "performanceType": {
-                "label": "Expression",
-                "value": 2
-              },
-              "refId": "C"
             }
           ],
           "title": "Writer Thread Pool",
+          "transformations": [
+            {
+              "id": "calculateField",
+              "options": {
+                "alias": "usage",
+                "binary": {
+                  "left": "use",
+                  "operator": "/",
+                  "reducer": "sum",
+                  "right": "max"
+                },
+                "mode": "binary",
+                "reduce": {
+                  "reducer": "sum"
+                }
+              }
+            }
+          ],
           "type": "timeseries"
         },
         {
@@ -56847,7 +56877,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -56869,7 +56900,7 @@
                   },
                   {
                     "id": "unit",
-                    "value": "percent"
+                    "value": "percentunit"
                   },
                   {
                     "id": "custom.lineStyle",
@@ -56945,7 +56976,7 @@
             "h": 10,
             "w": 6,
             "x": 12,
-            "y": 51
+            "y": 13
           },
           "id": 34,
           "options": {
@@ -59028,23 +59059,27 @@
                 "value": 1
               },
               "refId": "A"
-            },
-            {
-              "datasource": {
-                "type": "opennms-performance-datasource",
-                "uid": "${dataSource}"
-              },
-              "expression": "use / max * 100",
-              "hide": false,
-              "label": "usage",
-              "performanceType": {
-                "label": "Expression",
-                "value": 2
-              },
-              "refId": "C"
             }
           ],
           "title": "Scan Thread Pool",
+          "transformations": [
+            {
+              "id": "calculateField",
+              "options": {
+                "alias": "usage",
+                "binary": {
+                  "left": "use",
+                  "operator": "/",
+                  "reducer": "sum",
+                  "right": "max"
+                },
+                "mode": "binary",
+                "reduce": {
+                  "reducer": "sum"
+                }
+              }
+            }
+          ],
           "type": "timeseries"
         },
         {
@@ -59095,7 +59130,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -59117,7 +59153,7 @@
                   },
                   {
                     "id": "unit",
-                    "value": "percent"
+                    "value": "percentunit"
                   },
                   {
                     "id": "custom.lineStyle",
@@ -59163,7 +59199,7 @@
             "h": 10,
             "w": 6,
             "x": 18,
-            "y": 51
+            "y": 13
           },
           "id": 42,
           "options": {
@@ -61246,23 +61282,27 @@
                 "value": 1
               },
               "refId": "B"
-            },
-            {
-              "datasource": {
-                "type": "opennms-performance-datasource",
-                "uid": "${dataSource}"
-              },
-              "expression": "use / max * 100",
-              "hide": false,
-              "label": "usage",
-              "performanceType": {
-                "label": "Expression",
-                "value": 2
-              },
-              "refId": "C"
             }
           ],
           "title": "Scheduler Thread Pool",
+          "transformations": [
+            {
+              "id": "calculateField",
+              "options": {
+                "alias": "usage",
+                "binary": {
+                  "left": "use",
+                  "operator": "/",
+                  "reducer": "sum",
+                  "right": "max"
+                },
+                "mode": "binary",
+                "reduce": {
+                  "reducer": "sum"
+                }
+              }
+            }
+          ],
           "type": "timeseries"
         },
         {
@@ -61313,7 +61353,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -61335,7 +61376,7 @@
                   },
                   {
                     "id": "unit",
-                    "value": "percent"
+                    "value": "percentunit"
                   },
                   {
                     "id": "custom.lineStyle",
@@ -61366,7 +61407,7 @@
             "h": 10,
             "w": 6,
             "x": 0,
-            "y": 61
+            "y": 23
           },
           "id": 35,
           "options": {
@@ -63447,20 +63488,6 @@
               "refId": "B"
             },
             {
-              "datasource": {
-                "type": "opennms-performance-datasource",
-                "uid": "${dataSource}"
-              },
-              "expression": "completed / total * 100",
-              "hide": false,
-              "label": "ratio",
-              "performanceType": {
-                "label": "Expression",
-                "value": 2
-              },
-              "refId": "C"
-            },
-            {
               "attribute": {
                 "attribute": {
                   "label": "PvImprtTskQPCnt",
@@ -64492,6 +64519,24 @@
             }
           ],
           "title": "Importer Scheduler",
+          "transformations": [
+            {
+              "id": "calculateField",
+              "options": {
+                "alias": "ratio",
+                "binary": {
+                  "left": "completed",
+                  "operator": "/",
+                  "reducer": "sum",
+                  "right": "total"
+                },
+                "mode": "binary",
+                "reduce": {
+                  "reducer": "sum"
+                }
+              }
+            }
+          ],
           "type": "timeseries"
         },
         {
@@ -64542,7 +64587,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -64564,7 +64610,7 @@
                   },
                   {
                     "id": "unit",
-                    "value": "percent"
+                    "value": "percentunit"
                   },
                   {
                     "id": "custom.lineStyle",
@@ -64595,7 +64641,7 @@
             "h": 10,
             "w": 6,
             "x": 6,
-            "y": 61
+            "y": 23
           },
           "id": 36,
           "options": {
@@ -66676,20 +66722,6 @@
               "refId": "B"
             },
             {
-              "datasource": {
-                "type": "opennms-performance-datasource",
-                "uid": "${dataSource}"
-              },
-              "expression": "completed / total * 100",
-              "hide": false,
-              "label": "ratio",
-              "performanceType": {
-                "label": "Expression",
-                "value": 2
-              },
-              "refId": "C"
-            },
-            {
               "attribute": {
                 "attribute": {
                   "label": "PvWrtTskQPCnt",
@@ -67721,6 +67753,24 @@
             }
           ],
           "title": "Writer Scheduler",
+          "transformations": [
+            {
+              "id": "calculateField",
+              "options": {
+                "alias": "ratio",
+                "binary": {
+                  "left": "completed",
+                  "operator": "/",
+                  "reducer": "sum",
+                  "right": "total"
+                },
+                "mode": "binary",
+                "reduce": {
+                  "reducer": "sum"
+                }
+              }
+            }
+          ],
           "type": "timeseries"
         },
         {
@@ -67771,7 +67821,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -67793,7 +67844,7 @@
                   },
                   {
                     "id": "unit",
-                    "value": "percent"
+                    "value": "percentunit"
                   },
                   {
                     "id": "custom.lineStyle",
@@ -67824,7 +67875,7 @@
             "h": 10,
             "w": 6,
             "x": 12,
-            "y": 61
+            "y": 23
           },
           "id": 37,
           "options": {
@@ -69905,20 +69956,6 @@
               "refId": "B"
             },
             {
-              "datasource": {
-                "type": "opennms-performance-datasource",
-                "uid": "${dataSource}"
-              },
-              "expression": "completed / total * 100",
-              "hide": false,
-              "label": "ratio",
-              "performanceType": {
-                "label": "Expression",
-                "value": 2
-              },
-              "refId": "C"
-            },
-            {
               "attribute": {
                 "attribute": {
                   "label": "PvScanTskQPCnt",
@@ -70950,6 +70987,24 @@
             }
           ],
           "title": "Scan Scheduler",
+          "transformations": [
+            {
+              "id": "calculateField",
+              "options": {
+                "alias": "ratio",
+                "binary": {
+                  "left": "completed",
+                  "operator": "/",
+                  "reducer": "sum",
+                  "right": "total"
+                },
+                "mode": "binary",
+                "reduce": {
+                  "reducer": "sum"
+                }
+              }
+            }
+          ],
           "type": "timeseries"
         },
         {
@@ -71000,7 +71055,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -71022,7 +71078,7 @@
                   },
                   {
                     "id": "unit",
-                    "value": "percent"
+                    "value": "percentunit"
                   },
                   {
                     "id": "custom.lineStyle",
@@ -71053,7 +71109,7 @@
             "h": 10,
             "w": 6,
             "x": 18,
-            "y": 61
+            "y": 23
           },
           "id": 43,
           "options": {
@@ -73134,20 +73190,6 @@
               "refId": "B"
             },
             {
-              "datasource": {
-                "type": "opennms-performance-datasource",
-                "uid": "${dataSource}"
-              },
-              "expression": "completed / total * 100",
-              "hide": false,
-              "label": "ratio",
-              "performanceType": {
-                "label": "Expression",
-                "value": 2
-              },
-              "refId": "C"
-            },
-            {
               "attribute": {
                 "attribute": {
                   "label": "PvSchdTskQPCnt",
@@ -74179,6 +74221,24 @@
             }
           ],
           "title": "Scheduler",
+          "transformations": [
+            {
+              "id": "calculateField",
+              "options": {
+                "alias": "ratio",
+                "binary": {
+                  "left": "completed",
+                  "operator": "/",
+                  "reducer": "sum",
+                  "right": "total"
+                },
+                "mode": "binary",
+                "reduce": {
+                  "reducer": "sum"
+                }
+              }
+            }
+          ],
           "type": "timeseries"
         }
       ],
