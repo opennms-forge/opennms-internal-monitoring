@@ -2444,7 +2444,7 @@
             "mode": "thresholds"
           },
           "mappings": [],
-          "max": 100,
+          "max": 1,
           "min": 0,
           "thresholds": {
             "mode": "absolute",
@@ -2455,15 +2455,15 @@
               },
               {
                 "color": "#EAB839",
-                "value": 33
+                "value": 0.33
               },
               {
                 "color": "red",
-                "value": 66
+                "value": 0.66
               }
             ]
           },
-          "unit": "percent"
+          "unit": "percentunit"
         },
         "overrides": []
       },
@@ -2482,7 +2482,7 @@
         "orientation": "horizontal",
         "reduceOptions": {
           "calcs": [
-            "lastNotNull"
+            "last"
           ],
           "fields": "",
           "values": false
@@ -3515,7 +3515,7 @@
             "type": "opennms-performance-datasource",
             "uid": "${dataSource}"
           },
-          "hide": true,
+          "hide": false,
           "performanceType": {
             "label": "Attribute",
             "value": 1
@@ -4546,29 +4546,34 @@
             "type": "opennms-performance-datasource",
             "uid": "${dataSource}"
           },
-          "hide": true,
+          "hide": false,
           "performanceType": {
             "label": "Attribute",
             "value": 1
           },
           "refId": "B"
-        },
-        {
-          "datasource": {
-            "type": "opennms-performance-datasource",
-            "uid": "${dataSource}"
-          },
-          "expression": "use / max * 100",
-          "hide": false,
-          "label": "usage",
-          "performanceType": {
-            "label": "Expression",
-            "value": 2
-          },
-          "refId": "C"
         }
       ],
       "title": "Pollerd: Thread Pool",
+      "transformations": [
+        {
+          "id": "calculateField",
+          "options": {
+            "alias": "usage",
+            "binary": {
+              "left": "use",
+              "operator": "/",
+              "reducer": "sum",
+              "right": "max"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            },
+            "replaceFields": true
+          }
+        }
+      ],
       "type": "bargauge"
     },
     {
@@ -4583,7 +4588,7 @@
             "mode": "thresholds"
           },
           "mappings": [],
-          "max": 100,
+          "max": 1,
           "min": 0,
           "thresholds": {
             "mode": "absolute",
@@ -4594,15 +4599,15 @@
               },
               {
                 "color": "#EAB839",
-                "value": 33
+                "value": 0.33
               },
               {
                 "color": "red",
-                "value": 66
+                "value": 0.66
               }
             ]
           },
-          "unit": "percent"
+          "unit": "percentunit"
         },
         "overrides": []
       },
@@ -5654,7 +5659,7 @@
             "type": "opennms-performance-datasource",
             "uid": "${dataSource}"
           },
-          "hide": true,
+          "hide": false,
           "performanceType": {
             "label": "Attribute",
             "value": 1
@@ -6685,29 +6690,34 @@
             "type": "opennms-performance-datasource",
             "uid": "${dataSource}"
           },
-          "hide": true,
+          "hide": false,
           "performanceType": {
             "label": "Attribute",
             "value": 1
           },
           "refId": "B"
-        },
-        {
-          "datasource": {
-            "type": "opennms-performance-datasource",
-            "uid": "${dataSource}"
-          },
-          "expression": "use / max * 100",
-          "hide": false,
-          "label": "usage",
-          "performanceType": {
-            "label": "Expression",
-            "value": 2
-          },
-          "refId": "C"
         }
       ],
       "title": "Collectd: Thread Pool",
+      "transformations": [
+        {
+          "id": "calculateField",
+          "options": {
+            "alias": "usage",
+            "binary": {
+              "left": "use",
+              "operator": "/",
+              "reducer": "sum",
+              "right": "max"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            },
+            "replaceFields": true
+          }
+        }
+      ],
       "type": "bargauge"
     },
     {
@@ -6721,8 +6731,9 @@
           "color": {
             "mode": "thresholds"
           },
+          "decimals": 0,
           "mappings": [],
-          "max": 100,
+          "max": 1,
           "min": 0,
           "thresholds": {
             "mode": "absolute",
@@ -6733,15 +6744,15 @@
               },
               {
                 "color": "#EAB839",
-                "value": 33
+                "value": 0.33
               },
               {
                 "color": "red",
-                "value": 66
+                "value": 0.66
               }
             ]
           },
-          "unit": "percent"
+          "unit": "percentunit"
         },
         "overrides": []
       },
@@ -7793,7 +7804,7 @@
             "type": "opennms-performance-datasource",
             "uid": "${dataSource}"
           },
-          "hide": true,
+          "hide": false,
           "performanceType": {
             "label": "Attribute",
             "value": 1
@@ -8824,29 +8835,34 @@
             "type": "opennms-performance-datasource",
             "uid": "${dataSource}"
           },
-          "hide": true,
+          "hide": false,
           "performanceType": {
             "label": "Attribute",
             "value": 1
           },
           "refId": "B"
-        },
-        {
-          "datasource": {
-            "type": "opennms-performance-datasource",
-            "uid": "${dataSource}"
-          },
-          "expression": "use / max * 100",
-          "hide": false,
-          "label": "usage",
-          "performanceType": {
-            "label": "Expression",
-            "value": 2
-          },
-          "refId": "C"
         }
       ],
       "title": "Provisiond Importer: Thread Pool",
+      "transformations": [
+        {
+          "id": "calculateField",
+          "options": {
+            "alias": "usage",
+            "binary": {
+              "left": "use",
+              "operator": "/",
+              "reducer": "sum",
+              "right": "max"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            },
+            "replaceFields": true
+          }
+        }
+      ],
       "type": "bargauge"
     },
     {
@@ -10980,7 +10996,8 @@
             "mode": "binary",
             "reduce": {
               "reducer": "sum"
-            }
+            },
+            "replaceFields": true
           }
         }
       ],
@@ -10998,10 +11015,10 @@
             "mode": "thresholds"
           },
           "mappings": [],
-          "max": 100,
+          "max": 1,
           "min": 0,
           "thresholds": {
-            "mode": "percentage",
+            "mode": "absolute",
             "steps": [
               {
                 "color": "semi-dark-red",
@@ -11009,30 +11026,17 @@
               },
               {
                 "color": "semi-dark-yellow",
-                "value": 33
+                "value": 0.33
               },
               {
                 "color": "semi-dark-green",
-                "value": 66
+                "value": 0.66
               }
             ]
           },
-          "unit": "percent"
+          "unit": "percentunit"
         },
-        "overrides": [
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "ratio"
-            },
-            "properties": [
-              {
-                "id": "unit",
-                "value": "percent"
-              }
-            ]
-          }
-        ]
+        "overrides": []
       },
       "gridPos": {
         "h": 2,
@@ -12082,7 +12086,7 @@
             "type": "opennms-performance-datasource",
             "uid": "${dataSource}"
           },
-          "hide": true,
+          "hide": false,
           "performanceType": {
             "label": "Attribute",
             "value": 1
@@ -13112,29 +13116,34 @@
             "type": "opennms-performance-datasource",
             "uid": "${dataSource}"
           },
-          "hide": true,
+          "hide": false,
           "performanceType": {
             "label": "Attribute",
             "value": 1
           },
           "refId": "B"
-        },
-        {
-          "datasource": {
-            "type": "opennms-performance-datasource",
-            "uid": "${dataSource}"
-          },
-          "expression": "completed / total * 100",
-          "hide": false,
-          "label": "ratio",
-          "performanceType": {
-            "label": "Expression",
-            "value": 2
-          },
-          "refId": "C"
         }
       ],
       "title": "Pollerd: Scheduler",
+      "transformations": [
+        {
+          "id": "calculateField",
+          "options": {
+            "alias": "ratio",
+            "binary": {
+              "left": "completed",
+              "operator": "/",
+              "reducer": "sum",
+              "right": "total"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            },
+            "replaceFields": true
+          }
+        }
+      ],
       "type": "bargauge"
     },
     {
@@ -13149,10 +13158,10 @@
             "mode": "thresholds"
           },
           "mappings": [],
-          "max": 100,
+          "max": 1,
           "min": 0,
           "thresholds": {
-            "mode": "percentage",
+            "mode": "absolute",
             "steps": [
               {
                 "color": "semi-dark-red",
@@ -13160,30 +13169,17 @@
               },
               {
                 "color": "semi-dark-yellow",
-                "value": 33
+                "value": 0.3295
               },
               {
                 "color": "semi-dark-green",
-                "value": 66
+                "value": 0.66
               }
             ]
           },
-          "unit": "percent"
+          "unit": "percentunit"
         },
-        "overrides": [
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "ratio"
-            },
-            "properties": [
-              {
-                "id": "unit",
-                "value": "percent"
-              }
-            ]
-          }
-        ]
+        "overrides": []
       },
       "gridPos": {
         "h": 2,
@@ -14233,7 +14229,7 @@
             "type": "opennms-performance-datasource",
             "uid": "${dataSource}"
           },
-          "hide": true,
+          "hide": false,
           "performanceType": {
             "label": "Attribute",
             "value": 1
@@ -15263,29 +15259,34 @@
             "type": "opennms-performance-datasource",
             "uid": "${dataSource}"
           },
-          "hide": true,
+          "hide": false,
           "performanceType": {
             "label": "Attribute",
             "value": 1
           },
           "refId": "B"
-        },
-        {
-          "datasource": {
-            "type": "opennms-performance-datasource",
-            "uid": "${dataSource}"
-          },
-          "expression": "completed / total * 100",
-          "hide": false,
-          "label": "ratio",
-          "performanceType": {
-            "label": "Expression",
-            "value": 2
-          },
-          "refId": "C"
         }
       ],
       "title": "Collectd: Scheduler",
+      "transformations": [
+        {
+          "id": "calculateField",
+          "options": {
+            "alias": "usage",
+            "binary": {
+              "left": "completed",
+              "operator": "/",
+              "reducer": "sum",
+              "right": "total"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            },
+            "replaceFields": true
+          }
+        }
+      ],
       "type": "bargauge"
     },
     {
@@ -15300,7 +15301,7 @@
             "mode": "thresholds"
           },
           "mappings": [],
-          "max": 100,
+          "max": 1,
           "min": 0,
           "thresholds": {
             "mode": "absolute",
@@ -15311,15 +15312,15 @@
               },
               {
                 "color": "#EAB839",
-                "value": 33
+                "value": 0.33
               },
               {
                 "color": "red",
-                "value": 66
+                "value": 0.66
               }
             ]
           },
-          "unit": "percent"
+          "unit": "percentunit"
         },
         "overrides": []
       },
@@ -15338,7 +15339,7 @@
         "orientation": "horizontal",
         "reduceOptions": {
           "calcs": [
-            "lastNotNull"
+            "last"
           ],
           "fields": "",
           "values": false
@@ -16371,7 +16372,7 @@
             "type": "opennms-performance-datasource",
             "uid": "${dataSource}"
           },
-          "hide": true,
+          "hide": false,
           "performanceType": {
             "label": "Attribute",
             "value": 1
@@ -17402,29 +17403,34 @@
             "type": "opennms-performance-datasource",
             "uid": "${dataSource}"
           },
-          "hide": true,
+          "hide": false,
           "performanceType": {
             "label": "Attribute",
             "value": 1
           },
           "refId": "B"
-        },
-        {
-          "datasource": {
-            "type": "opennms-performance-datasource",
-            "uid": "${dataSource}"
-          },
-          "expression": "use / max * 100",
-          "hide": false,
-          "label": "usage",
-          "performanceType": {
-            "label": "Expression",
-            "value": 2
-          },
-          "refId": "C"
         }
       ],
       "title": "Provisiond Writer: Thread Pool",
+      "transformations": [
+        {
+          "id": "calculateField",
+          "options": {
+            "alias": "usage",
+            "binary": {
+              "left": "use",
+              "operator": "/",
+              "reducer": "sum",
+              "right": "max"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            },
+            "replaceFields": true
+          }
+        }
+      ],
       "type": "bargauge"
     },
     {
@@ -22030,7 +22036,7 @@
             "mode": "thresholds"
           },
           "mappings": [],
-          "max": 100,
+          "max": 1,
           "min": 0,
           "thresholds": {
             "mode": "absolute",
@@ -22041,15 +22047,15 @@
               },
               {
                 "color": "#EAB839",
-                "value": 33
+                "value": 0.33
               },
               {
                 "color": "red",
-                "value": 66
+                "value": 0.66
               }
             ]
           },
-          "unit": "percent"
+          "unit": "percentunit"
         },
         "overrides": []
       },
@@ -22068,7 +22074,7 @@
         "orientation": "horizontal",
         "reduceOptions": {
           "calcs": [
-            "lastNotNull"
+            "last"
           ],
           "fields": "",
           "values": false
@@ -23101,7 +23107,7 @@
             "type": "opennms-performance-datasource",
             "uid": "${dataSource}"
           },
-          "hide": true,
+          "hide": false,
           "performanceType": {
             "label": "Attribute",
             "value": 1
@@ -24132,29 +24138,34 @@
             "type": "opennms-performance-datasource",
             "uid": "${dataSource}"
           },
-          "hide": true,
+          "hide": false,
           "performanceType": {
             "label": "Attribute",
             "value": 1
           },
           "refId": "B"
-        },
-        {
-          "datasource": {
-            "type": "opennms-performance-datasource",
-            "uid": "${dataSource}"
-          },
-          "expression": "use / max * 100",
-          "hide": false,
-          "label": "usage",
-          "performanceType": {
-            "label": "Expression",
-            "value": 2
-          },
-          "refId": "C"
         }
       ],
       "title": "Provisiond Scan: Thread Pool",
+      "transformations": [
+        {
+          "id": "calculateField",
+          "options": {
+            "alias": "usage",
+            "binary": {
+              "left": "use",
+              "operator": "/",
+              "reducer": "sum",
+              "right": "max"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            },
+            "replaceFields": true
+          }
+        }
+      ],
       "type": "bargauge"
     },
     {
@@ -24168,7 +24179,7 @@
             "mode": "thresholds"
           },
           "mappings": [],
-          "max": 100,
+          "max": 1,
           "min": 0,
           "thresholds": {
             "mode": "absolute",
@@ -24179,11 +24190,11 @@
               },
               {
                 "color": "red",
-                "value": 80
+                "value": 0.8
               }
             ]
           },
-          "unit": "percent"
+          "unit": "percentunit"
         },
         "overrides": []
       },
@@ -24220,7 +24231,7 @@
               "relativePath": "snmp/fs/selfmonitor/1/opennms-jvm",
               "rrdFile": "OsOpenFDCount.rrd"
             },
-            "label": "used",
+            "label": "use",
             "node": {
               "label": "$node",
               "value": "$node"
@@ -25235,7 +25246,7 @@
             "type": "opennms-performance-datasource",
             "uid": "${dataSource}"
           },
-          "hide": true,
+          "hide": false,
           "performanceType": {
             "label": "Attribute",
             "value": 1
@@ -26265,29 +26276,34 @@
             "type": "opennms-performance-datasource",
             "uid": "${dataSource}"
           },
-          "hide": true,
+          "hide": false,
           "performanceType": {
             "label": "Attribute",
             "value": 1
           },
           "refId": "B"
-        },
-        {
-          "datasource": {
-            "type": "opennms-performance-datasource",
-            "uid": "${dataSource}"
-          },
-          "expression": "used / total * 100",
-          "hide": false,
-          "label": "usage",
-          "performanceType": {
-            "label": "Expression",
-            "value": 2
-          },
-          "refId": "C"
         }
       ],
       "title": "JVM: File Descriptor",
+      "transformations": [
+        {
+          "id": "calculateField",
+          "options": {
+            "alias": "usage",
+            "binary": {
+              "left": "use",
+              "operator": "/",
+              "reducer": "sum",
+              "right": "total"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            },
+            "replaceFields": true
+          }
+        }
+      ],
       "type": "bargauge"
     },
     {
@@ -26302,7 +26318,7 @@
             "mode": "thresholds"
           },
           "mappings": [],
-          "max": 100,
+          "max": 1,
           "min": 0,
           "thresholds": {
             "mode": "absolute",
@@ -26313,15 +26329,15 @@
               },
               {
                 "color": "#EAB839",
-                "value": 33
+                "value": 0.33
               },
               {
                 "color": "red",
-                "value": 66
+                "value": 0.66
               }
             ]
           },
-          "unit": "percent"
+          "unit": "percentunit"
         },
         "overrides": []
       },
@@ -26340,7 +26356,7 @@
         "orientation": "horizontal",
         "reduceOptions": {
           "calcs": [
-            "lastNotNull"
+            "last"
           ],
           "fields": "",
           "values": false
@@ -27373,7 +27389,7 @@
             "type": "opennms-performance-datasource",
             "uid": "${dataSource}"
           },
-          "hide": true,
+          "hide": false,
           "performanceType": {
             "label": "Attribute",
             "value": 1
@@ -28404,29 +28420,34 @@
             "type": "opennms-performance-datasource",
             "uid": "${dataSource}"
           },
-          "hide": true,
+          "hide": false,
           "performanceType": {
             "label": "Attribute",
             "value": 1
           },
           "refId": "B"
-        },
-        {
-          "datasource": {
-            "type": "opennms-performance-datasource",
-            "uid": "${dataSource}"
-          },
-          "expression": "use / max * 100",
-          "hide": false,
-          "label": "usage",
-          "performanceType": {
-            "label": "Expression",
-            "value": 2
-          },
-          "refId": "C"
         }
       ],
       "title": "Provisiond Scheduler: Thread Pool",
+      "transformations": [
+        {
+          "id": "calculateField",
+          "options": {
+            "alias": "usage",
+            "binary": {
+              "left": "use",
+              "operator": "/",
+              "reducer": "sum",
+              "right": "max"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            },
+            "replaceFields": true
+          }
+        }
+      ],
       "type": "bargauge"
     },
     {
@@ -40411,8 +40432,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -43659,8 +43679,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -74180,7 +74199,7 @@
     "list": [
       {
         "current": {
-          "selected": true,
+          "selected": false,
           "text": "OpenNMS Performance",
           "value": "PF64BB6D6ECC8F3F8"
         },
