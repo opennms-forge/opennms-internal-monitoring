@@ -40469,7 +40469,7 @@
             "h": 10,
             "w": 12,
             "x": 0,
-            "y": 11
+            "y": 37
           },
           "id": 8,
           "options": {
@@ -43706,7 +43706,7 @@
             "h": 10,
             "w": 12,
             "x": 12,
-            "y": 11
+            "y": 37
           },
           "id": 9,
           "options": {
@@ -46970,7 +46970,7 @@
             "h": 10,
             "w": 12,
             "x": 0,
-            "y": 12
+            "y": 48
           },
           "id": 21,
           "options": {
@@ -49176,7 +49176,7 @@
             "h": 10,
             "w": 12,
             "x": 12,
-            "y": 12
+            "y": 48
           },
           "id": 22,
           "options": {
@@ -74212,6 +74212,570 @@
       ],
       "title": "Provisiond",
       "type": "row"
+    },
+    {
+      "collapsed": true,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 31
+      },
+      "id": 46,
+      "panels": [
+        {
+          "datasource": {
+            "type": "opennms-performance-datasource",
+            "uid": "${dataSource}"
+          },
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "thresholds"
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green",
+                    "value": null
+                  },
+                  {
+                    "color": "red",
+                    "value": 80
+                  }
+                ]
+              }
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 8,
+            "w": 4,
+            "x": 0,
+            "y": 14
+          },
+          "id": 47,
+          "options": {
+            "colorMode": "value",
+            "graphMode": "area",
+            "justifyMode": "auto",
+            "orientation": "auto",
+            "reduceOptions": {
+              "calcs": [
+                "lastNotNull"
+              ],
+              "fields": "",
+              "values": false
+            },
+            "textMode": "auto"
+          },
+          "pluginVersion": "10.1.4",
+          "targets": [
+            {
+              "attribute": {
+                "attribute": {
+                  "label": "ReqtnCounter",
+                  "name": "ReqtnCounter",
+                  "relativePath": "snmp/fs/selfmonitor/1/requisitionMetrics/file:-usr-share-opennms-etc-imports-node_batch_0.xml.nodeScan",
+                  "rrdFile": "ReqtnCounter.rrd"
+                },
+                "label": "Counter",
+                "node": {
+                  "label": "$node",
+                  "value": "$node"
+                },
+                "resource": {
+                  "label": "$requisition",
+                  "value": "$requisition"
+                }
+              },
+              "datasource": {
+                "type": "opennms-performance-datasource",
+                "uid": "${dataSource}"
+              },
+              "performanceType": {
+                "label": "Attribute",
+                "value": 1
+              },
+              "refId": "A"
+            }
+          ],
+          "title": "Requisition Counter",
+          "type": "stat"
+        },
+        {
+          "datasource": {
+            "type": "opennms-performance-datasource",
+            "uid": "${dataSource}"
+          },
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "palette-classic"
+              },
+              "custom": {
+                "axisCenteredZero": false,
+                "axisColorMode": "text",
+                "axisLabel": "",
+                "axisPlacement": "auto",
+                "barAlignment": 0,
+                "drawStyle": "line",
+                "fillOpacity": 0,
+                "gradientMode": "none",
+                "hideFrom": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                },
+                "insertNulls": false,
+                "lineInterpolation": "linear",
+                "lineWidth": 1,
+                "pointSize": 5,
+                "scaleDistribution": {
+                  "type": "linear"
+                },
+                "showPoints": "auto",
+                "spanNulls": false,
+                "stacking": {
+                  "group": "A",
+                  "mode": "none"
+                },
+                "thresholdsStyle": {
+                  "mode": "off"
+                }
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green",
+                    "value": null
+                  },
+                  {
+                    "color": "red",
+                    "value": 80
+                  }
+                ]
+              }
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 8,
+            "w": 10,
+            "x": 4,
+            "y": 14
+          },
+          "id": 44,
+          "options": {
+            "legend": {
+              "calcs": [
+                "last",
+                "min",
+                "max",
+                "mean"
+              ],
+              "displayMode": "table",
+              "placement": "bottom",
+              "showLegend": true,
+              "sortBy": "Name",
+              "sortDesc": false
+            },
+            "tooltip": {
+              "mode": "single",
+              "sort": "none"
+            }
+          },
+          "targets": [
+            {
+              "attribute": {
+                "attribute": {
+                  "label": "Reqtn50th",
+                  "name": "Reqtn50th",
+                  "relativePath": "snmp/fs/selfmonitor/1/requisitionMetrics/file:-usr-share-opennms-etc-imports-node_batch_0.xml",
+                  "rrdFile": "Reqtn50th.rrd"
+                },
+                "label": "50",
+                "node": {
+                  "label": "$node",
+                  "value": "$node"
+                },
+                "resource": {
+                  "label": "$requisition",
+                  "value": "$requisition"
+                }
+              },
+              "datasource": {
+                "type": "opennms-performance-datasource",
+                "uid": "${dataSource}"
+              },
+              "performanceType": {
+                "label": "Attribute",
+                "value": 1
+              },
+              "refId": "A"
+            },
+            {
+              "attribute": {
+                "attribute": {
+                  "label": "Reqtn75th",
+                  "name": "Reqtn75th",
+                  "relativePath": "snmp/fs/selfmonitor/1/requisitionMetrics/file:-usr-share-opennms-etc-imports-node_batch_0.xml",
+                  "rrdFile": "Reqtn75th.rrd"
+                },
+                "label": "75",
+                "node": {
+                  "label": "$node",
+                  "value": "$node"
+                },
+                "resource": {
+                  "label": "$requisition",
+                  "value": "$requisition"
+                }
+              },
+              "datasource": {
+                "type": "opennms-performance-datasource",
+                "uid": "${dataSource}"
+              },
+              "hide": false,
+              "performanceType": {
+                "label": "Attribute",
+                "value": 1
+              },
+              "refId": "B"
+            },
+            {
+              "attribute": {
+                "attribute": {
+                  "label": "Reqtn95th",
+                  "name": "Reqtn95th",
+                  "relativePath": "snmp/fs/selfmonitor/1/requisitionMetrics/file:-usr-share-opennms-etc-imports-node_batch_0.xml",
+                  "rrdFile": "Reqtn95th.rrd"
+                },
+                "label": "95",
+                "node": {
+                  "label": "$node",
+                  "value": "$node"
+                },
+                "resource": {
+                  "label": "$requisition",
+                  "value": "$requisition"
+                }
+              },
+              "datasource": {
+                "type": "opennms-performance-datasource",
+                "uid": "${dataSource}"
+              },
+              "hide": false,
+              "performanceType": {
+                "label": "Attribute",
+                "value": 1
+              },
+              "refId": "C"
+            },
+            {
+              "attribute": {
+                "attribute": {
+                  "label": "Reqtn98th",
+                  "name": "Reqtn98th",
+                  "relativePath": "snmp/fs/selfmonitor/1/requisitionMetrics/file:-usr-share-opennms-etc-imports-node_batch_0.xml",
+                  "rrdFile": "Reqtn98th.rrd"
+                },
+                "label": "98",
+                "node": {
+                  "label": "$node",
+                  "value": "$node"
+                },
+                "resource": {
+                  "label": "$requisition",
+                  "value": "$requisition"
+                }
+              },
+              "datasource": {
+                "type": "opennms-performance-datasource",
+                "uid": "${dataSource}"
+              },
+              "hide": false,
+              "performanceType": {
+                "label": "Attribute",
+                "value": 1
+              },
+              "refId": "D"
+            },
+            {
+              "attribute": {
+                "attribute": {
+                  "label": "Reqtn99th",
+                  "name": "Reqtn99th",
+                  "relativePath": "snmp/fs/selfmonitor/1/requisitionMetrics/file:-usr-share-opennms-etc-imports-node_batch_0.xml",
+                  "rrdFile": "Reqtn99th.rrd"
+                },
+                "label": "99",
+                "node": {
+                  "label": "$node",
+                  "value": "$node"
+                },
+                "resource": {
+                  "label": "$requisition",
+                  "value": "$requisition"
+                }
+              },
+              "datasource": {
+                "type": "opennms-performance-datasource",
+                "uid": "${dataSource}"
+              },
+              "hide": false,
+              "performanceType": {
+                "label": "Attribute",
+                "value": 1
+              },
+              "refId": "E"
+            },
+            {
+              "attribute": {
+                "attribute": {
+                  "label": "Reqtn999th",
+                  "name": "Reqtn999th",
+                  "relativePath": "snmp/fs/selfmonitor/1/requisitionMetrics/file:-usr-share-opennms-etc-imports-node_batch_0.xml",
+                  "rrdFile": "Reqtn999th.rrd"
+                },
+                "label": "99.9",
+                "node": {
+                  "label": "$node",
+                  "value": "$node"
+                },
+                "resource": {
+                  "label": "$requisition",
+                  "value": "$requisition"
+                }
+              },
+              "datasource": {
+                "type": "opennms-performance-datasource",
+                "uid": "${dataSource}"
+              },
+              "hide": false,
+              "performanceType": {
+                "label": "Attribute",
+                "value": 1
+              },
+              "refId": "F"
+            }
+          ],
+          "title": "Requisition Processing: $requisition",
+          "transformations": [],
+          "type": "timeseries"
+        },
+        {
+          "datasource": {
+            "type": "opennms-performance-datasource",
+            "uid": "${dataSource}"
+          },
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "palette-classic"
+              },
+              "custom": {
+                "axisCenteredZero": false,
+                "axisColorMode": "text",
+                "axisLabel": "",
+                "axisPlacement": "auto",
+                "barAlignment": 0,
+                "drawStyle": "line",
+                "fillOpacity": 0,
+                "gradientMode": "none",
+                "hideFrom": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                },
+                "insertNulls": false,
+                "lineInterpolation": "linear",
+                "lineWidth": 1,
+                "pointSize": 5,
+                "scaleDistribution": {
+                  "type": "linear"
+                },
+                "showPoints": "auto",
+                "spanNulls": false,
+                "stacking": {
+                  "group": "A",
+                  "mode": "none"
+                },
+                "thresholdsStyle": {
+                  "mode": "off"
+                }
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green",
+                    "value": null
+                  },
+                  {
+                    "color": "red",
+                    "value": 80
+                  }
+                ]
+              }
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 8,
+            "w": 10,
+            "x": 14,
+            "y": 14
+          },
+          "id": 45,
+          "options": {
+            "legend": {
+              "calcs": [
+                "last",
+                "min",
+                "max",
+                "mean"
+              ],
+              "displayMode": "table",
+              "placement": "bottom",
+              "showLegend": true
+            },
+            "tooltip": {
+              "mode": "single",
+              "sort": "none"
+            }
+          },
+          "targets": [
+            {
+              "attribute": {
+                "attribute": {
+                  "label": "ReqtnMean",
+                  "name": "ReqtnMean",
+                  "relativePath": "snmp/fs/selfmonitor/1/requisitionMetrics/file:-usr-share-opennms-etc-imports-node_batch_0.xml",
+                  "rrdFile": "ReqtnMean.rrd"
+                },
+                "label": "mean",
+                "node": {
+                  "label": "$node",
+                  "value": "$node"
+                },
+                "resource": {
+                  "label": "$requisition",
+                  "value": "$requisition"
+                }
+              },
+              "datasource": {
+                "type": "opennms-performance-datasource",
+                "uid": "${dataSource}"
+              },
+              "performanceType": {
+                "label": "Attribute",
+                "value": 1
+              },
+              "refId": "A"
+            },
+            {
+              "attribute": {
+                "attribute": {
+                  "label": "Reqtn1m",
+                  "name": "Reqtn1m",
+                  "relativePath": "snmp/fs/selfmonitor/1/requisitionMetrics/file:-usr-share-opennms-etc-imports-node_batch_0.xml",
+                  "rrdFile": "Reqtn1m.rrd"
+                },
+                "label": "1m",
+                "node": {
+                  "label": "$node",
+                  "value": "$node"
+                },
+                "resource": {
+                  "label": "$requisition",
+                  "value": "$requisition"
+                }
+              },
+              "datasource": {
+                "type": "opennms-performance-datasource",
+                "uid": "${dataSource}"
+              },
+              "hide": false,
+              "performanceType": {
+                "label": "Attribute",
+                "value": 1
+              },
+              "refId": "B"
+            },
+            {
+              "attribute": {
+                "attribute": {
+                  "label": "Reqtn5m",
+                  "name": "Reqtn5m",
+                  "relativePath": "snmp/fs/selfmonitor/1/requisitionMetrics/file:-usr-share-opennms-etc-imports-node_batch_0.xml",
+                  "rrdFile": "Reqtn5m.rrd"
+                },
+                "label": "5m",
+                "node": {
+                  "label": "$node",
+                  "value": "$node"
+                },
+                "resource": {
+                  "label": "$requisition",
+                  "value": "$requisition"
+                }
+              },
+              "datasource": {
+                "type": "opennms-performance-datasource",
+                "uid": "${dataSource}"
+              },
+              "hide": false,
+              "performanceType": {
+                "label": "Attribute",
+                "value": 1
+              },
+              "refId": "C"
+            },
+            {
+              "attribute": {
+                "attribute": {
+                  "label": "Reqtn15m",
+                  "name": "Reqtn15m",
+                  "relativePath": "snmp/fs/selfmonitor/1/requisitionMetrics/file:-usr-share-opennms-etc-imports-node_batch_0.xml",
+                  "rrdFile": "Reqtn15m.rrd"
+                },
+                "label": "15m",
+                "node": {
+                  "label": "$node",
+                  "value": "$node"
+                },
+                "resource": {
+                  "label": "$requisition",
+                  "value": "$requisition"
+                }
+              },
+              "datasource": {
+                "type": "opennms-performance-datasource",
+                "uid": "${dataSource}"
+              },
+              "hide": false,
+              "performanceType": {
+                "label": "Attribute",
+                "value": 1
+              },
+              "refId": "D"
+            }
+          ],
+          "title": "Requisition Processing Rate: $requisition",
+          "transformations": [],
+          "type": "timeseries"
+        }
+      ],
+      "repeat": "requisition",
+      "repeatDirection": "h",
+      "title": "Requisitions: $requisition",
+      "type": "row"
     }
   ],
   "refresh": "1m",
@@ -74260,6 +74824,30 @@
         "query": "nodeFilter(serviceName like 'OpenNMS-JVM')",
         "refresh": 1,
         "regex": "",
+        "skipUrlSync": false,
+        "sort": 1,
+        "type": "query"
+      },
+      {
+        "current": {
+          "selected": false,
+          "text": "requisitionMetrics[file:-usr-share-opennms-etc-imports-node_batch_0.xml.nodeScan]",
+          "value": "requisitionMetrics[file:-usr-share-opennms-etc-imports-node_batch_0.xml.nodeScan]"
+        },
+        "datasource": {
+          "type": "opennms-performance-datasource",
+          "uid": "${dataSource}"
+        },
+        "definition": "nodeResources($node)",
+        "hide": 0,
+        "includeAll": false,
+        "label": "Requisition",
+        "multi": true,
+        "name": "requisition",
+        "options": [],
+        "query": "nodeResources($node)",
+        "refresh": 1,
+        "regex": "^requisitionMetrics.*",
         "skipUrlSync": false,
         "sort": 1,
         "type": "query"
