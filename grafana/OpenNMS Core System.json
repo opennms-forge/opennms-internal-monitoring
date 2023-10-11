@@ -19,7 +19,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 8,
+  "id": null,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -289,7 +289,7 @@
             "mode": "thresholds"
           },
           "mappings": [],
-          "max": 100,
+          "max": 1,
           "min": 0,
           "thresholds": {
             "mode": "absolute",
@@ -300,11 +300,11 @@
               },
               {
                 "color": "red",
-                "value": 80
+                "value": 0.8
               }
             ]
           },
-          "unit": "percent"
+          "unit": "percentunit"
         },
         "overrides": []
       },
@@ -1356,7 +1356,7 @@
             "type": "opennms-performance-datasource",
             "uid": "${dataSource}"
           },
-          "hide": true,
+          "hide": false,
           "performanceType": {
             "label": "Attribute",
             "value": 1
@@ -2386,43 +2386,50 @@
             "type": "opennms-performance-datasource",
             "uid": "${dataSource}"
           },
-          "hide": true,
+          "hide": false,
           "performanceType": {
             "label": "Attribute",
             "value": 1
           },
           "refId": "B"
-        },
-        {
-          "datasource": {
-            "type": "opennms-performance-datasource",
-            "uid": "${dataSource}"
-          },
-          "expression": "total - free",
-          "hide": true,
-          "label": "use",
-          "performanceType": {
-            "label": "Expression",
-            "value": 2
-          },
-          "refId": "D"
-        },
-        {
-          "datasource": {
-            "type": "opennms-performance-datasource",
-            "uid": "${dataSource}"
-          },
-          "expression": "use / total * 100",
-          "hide": false,
-          "label": "usage",
-          "performanceType": {
-            "label": "Expression",
-            "value": 2
-          },
-          "refId": "C"
         }
       ],
       "title": "JVM Memory",
+      "transformations": [
+        {
+          "id": "calculateField",
+          "options": {
+            "alias": "use",
+            "binary": {
+              "left": "total",
+              "operator": "-",
+              "reducer": "sum",
+              "right": "free"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "calculateField",
+          "options": {
+            "alias": "usage",
+            "binary": {
+              "left": "use",
+              "operator": "/",
+              "reducer": "sum",
+              "right": "total"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            },
+            "replaceFields": true
+          }
+        }
+      ],
       "type": "bargauge"
     },
     {
@@ -43436,7 +43443,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -46683,7 +46691,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -77221,11 +77230,7 @@
         "type": "datasource"
       },
       {
-        "current": {
-          "selected": true,
-          "text": "localhost",
-          "value": "selfmonitor:1"
-        },
+        "current": {},
         "datasource": {
           "type": "opennms-performance-datasource",
           "uid": "${dataSource}"
@@ -77254,6 +77259,6 @@
   "timezone": "",
   "title": "OpenNMS Core System",
   "uid": "c17170d8-b29c-4469-a7dc-bab0be1386a0",
-  "version": 4,
+  "version": 2,
   "weekStart": ""
 }
