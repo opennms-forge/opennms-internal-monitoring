@@ -1,0 +1,5 @@
+<foreign-source xmlns="http://xmlns.opennms.org/xsd/config/foreign-source" name="default" date-stamp="2023-10-15T18:23:04.646+02:00">
+   <scan-interval>1d</scan-interval>
+   <detectors/>
+   <policies/>
+</foreign-source>
