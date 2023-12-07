@@ -2653,7 +2653,7 @@
             "attribute": {
               "label": "recordSendRate",
               "name": "recordSendRate",
-              "relativePath": "snmp/fs/Minions/edge-01/kafkaIngestionRate/Labmonkeys.Sink.Telemetry-Netflow-9",
+              "relativePath": "snmp/fs/Minions/edge-01/kafkaIngestionRate/OpenNMS.Sink.Telemetry-Netflow-9",
               "rrdFile": "recordSendRate.rrd"
             },
             "label": "send",
@@ -2667,21 +2667,21 @@
                 "resource": []
               },
               "externalValueAttributes": {},
-              "id": "kafkaIngestionRate[Labmonkeys.Sink.Events]",
-              "label": "Labmonkeys.Sink.Events",
-              "name": "Labmonkeys.Sink.Events",
+              "id": "kafkaIngestionRate[OpenNMS.Sink.Events]",
+              "label": "OpenNMS.Sink.Events",
+              "name": "OpenNMS.Sink.Events",
               "parentId": "node[Minions:edge-01]",
               "rrdGraphAttributes": {
                 "recordSendRate": {
                   "name": "recordSendRate",
-                  "relativePath": "snmp/fs/Minions/edge-01/kafkaIngestionRate/Labmonkeys.Sink.Events",
+                  "relativePath": "snmp/fs/Minions/edge-01/kafkaIngestionRate/OpenNMS.Sink.Events",
                   "rrdFile": "recordSendRate.rrd"
                 }
               },
               "stringPropertyAttributes": {
                 "client-id": "producer-1",
                 "domain": "kafka.producer",
-                "topic": "Labmonkeys.Sink.Events",
+                "topic": "OpenNMS.Sink.Events",
                 "type": "producer-topic-metrics"
               },
               "typeLabel": "Kafka Ingestion Rate"
@@ -3893,7 +3893,7 @@
             "attribute": {
               "label": "recordSendRate",
               "name": "recordSendRate",
-              "relativePath": "snmp/fs/Minions/edge-01/kafkaIngestionRate/Labmonkeys.Sink.Telemetry-Netflow-9",
+              "relativePath": "snmp/fs/Minions/edge-01/kafkaIngestionRate/OpenNMS.Sink.Telemetry-Netflow-9",
               "rrdFile": "recordSendRate.rrd"
             },
             "label": "send",
@@ -3907,21 +3907,21 @@
                 "resource": []
               },
               "externalValueAttributes": {},
-              "id": "kafkaIngestionRate[Labmonkeys.Sink.Trap]",
-              "label": "Labmonkeys.Sink.Trap",
-              "name": "Labmonkeys.Sink.Trap",
+              "id": "kafkaIngestionRate[OpenNMS.Sink.Trap]",
+              "label": "OpenNMS.Sink.Trap",
+              "name": "OpenNMS.Sink.Trap",
               "parentId": "node[Minions:edge-01]",
               "rrdGraphAttributes": {
                 "recordSendRate": {
                   "name": "recordSendRate",
-                  "relativePath": "snmp/fs/Minions/edge-01/kafkaIngestionRate/Labmonkeys.Sink.Trap",
+                  "relativePath": "snmp/fs/Minions/edge-01/kafkaIngestionRate/OpenNMS.Sink.Trap",
                   "rrdFile": "recordSendRate.rrd"
                 }
               },
               "stringPropertyAttributes": {
                 "client-id": "producer-1",
                 "domain": "kafka.producer",
-                "topic": "Labmonkeys.Sink.Trap",
+                "topic": "OpenNMS.Sink.Trap",
                 "type": "producer-topic-metrics"
               },
               "typeLabel": "Kafka Ingestion Rate"
@@ -6225,7 +6225,7 @@
                 "attribute": {
                   "label": "recordSendRate",
                   "name": "recordSendRate",
-                  "relativePath": "snmp/fs/Minions/edge-01/kafkaIngestionRate/Labmonkeys.Sink.Telemetry-Netflow-5",
+                  "relativePath": "snmp/fs/Minions/edge-01/kafkaIngestionRate/OpenNMS.Sink.Telemetry-Netflow-5",
                   "rrdFile": "recordSendRate.rrd"
                 },
                 "label": "send",
@@ -6239,21 +6239,21 @@
                     "resource": []
                   },
                   "externalValueAttributes": {},
-                  "id": "kafkaIngestionRate[Labmonkeys.Sink.Telemetry-Netflow-5]",
-                  "label": "Labmonkeys.Sink.Telemetry-Netflow-5",
-                  "name": "Labmonkeys.Sink.Telemetry-Netflow-5",
+                  "id": "kafkaIngestionRate[OpenNMS.Sink.Telemetry-Netflow-5]",
+                  "label": "OpenNMS.Sink.Telemetry-Netflow-5",
+                  "name": "OpenNMS.Sink.Telemetry-Netflow-5",
                   "parentId": "node[Minions:edge-01]",
                   "rrdGraphAttributes": {
                     "recordSendRate": {
                       "name": "recordSendRate",
-                      "relativePath": "snmp/fs/Minions/edge-01/kafkaIngestionRate/Labmonkeys.Sink.Telemetry-Netflow-5",
+                      "relativePath": "snmp/fs/Minions/edge-01/kafkaIngestionRate/OpenNMS.Sink.Telemetry-Netflow-5",
                       "rrdFile": "recordSendRate.rrd"
                     }
                   },
                   "stringPropertyAttributes": {
                     "client-id": "producer-1",
                     "domain": "kafka.producer",
-                    "topic": "Labmonkeys.Sink.Telemetry-Netflow-5",
+                    "topic": "OpenNMS.Sink.Telemetry-Netflow-5",
                     "type": "producer-topic-metrics"
                   },
                   "typeLabel": "Kafka Ingestion Rate"
@@ -7463,7 +7463,7 @@
                 "attribute": {
                   "label": "recordSendRate",
                   "name": "recordSendRate",
-                  "relativePath": "snmp/fs/Minions/edge-01/kafkaIngestionRate/Labmonkeys.Sink.Telemetry-Netflow-9",
+                  "relativePath": "snmp/fs/Minions/edge-01/kafkaIngestionRate/OpenNMS.Sink.Telemetry-Netflow-9",
                   "rrdFile": "recordSendRate.rrd"
                 },
                 "label": "send",
@@ -7477,21 +7477,21 @@
                     "resource": []
                   },
                   "externalValueAttributes": {},
-                  "id": "kafkaIngestionRate[Labmonkeys.Sink.Telemetry-Netflow-9]",
-                  "label": "Labmonkeys.Sink.Telemetry-Netflow-9",
-                  "name": "Labmonkeys.Sink.Telemetry-Netflow-9",
+                  "id": "kafkaIngestionRate[OpenNMS.Sink.Telemetry-Netflow-9]",
+                  "label": "OpenNMS.Sink.Telemetry-Netflow-9",
+                  "name": "OpenNMS.Sink.Telemetry-Netflow-9",
                   "parentId": "node[Minions:edge-01]",
                   "rrdGraphAttributes": {
                     "recordSendRate": {
                       "name": "recordSendRate",
-                      "relativePath": "snmp/fs/Minions/edge-01/kafkaIngestionRate/Labmonkeys.Sink.Telemetry-Netflow-9",
+                      "relativePath": "snmp/fs/Minions/edge-01/kafkaIngestionRate/OpenNMS.Sink.Telemetry-Netflow-9",
                       "rrdFile": "recordSendRate.rrd"
                     }
                   },
                   "stringPropertyAttributes": {
                     "client-id": "producer-1",
                     "domain": "kafka.producer",
-                    "topic": "Labmonkeys.Sink.Telemetry-Netflow-9",
+                    "topic": "OpenNMS.Sink.Telemetry-Netflow-9",
                     "type": "producer-topic-metrics"
                   },
                   "typeLabel": "Kafka Ingestion Rate"
@@ -8701,7 +8701,7 @@
                 "attribute": {
                   "label": "recordSendRate",
                   "name": "recordSendRate",
-                  "relativePath": "snmp/fs/Minions/edge-01/kafkaIngestionRate/Labmonkeys.Sink.Telemetry-IPFIX",
+                  "relativePath": "snmp/fs/Minions/edge-01/kafkaIngestionRate/OpenNMS.Sink.Telemetry-IPFIX",
                   "rrdFile": "recordSendRate.rrd"
                 },
                 "label": "send",
@@ -8715,21 +8715,21 @@
                     "resource": []
                   },
                   "externalValueAttributes": {},
-                  "id": "kafkaIngestionRate[Labmonkeys.Sink.Telemetry-IPFIX]",
-                  "label": "Labmonkeys.Sink.Telemetry-IPFIX",
-                  "name": "Labmonkeys.Sink.Telemetry-IPFIX",
+                  "id": "kafkaIngestionRate[OpenNMS.Sink.Telemetry-IPFIX]",
+                  "label": "OpenNMS.Sink.Telemetry-IPFIX",
+                  "name": "OpenNMS.Sink.Telemetry-IPFIX",
                   "parentId": "node[Minions:edge-01]",
                   "rrdGraphAttributes": {
                     "recordSendRate": {
                       "name": "recordSendRate",
-                      "relativePath": "snmp/fs/Minions/edge-01/kafkaIngestionRate/Labmonkeys.Sink.Telemetry-IPFIX",
+                      "relativePath": "snmp/fs/Minions/edge-01/kafkaIngestionRate/OpenNMS.Sink.Telemetry-IPFIX",
                       "rrdFile": "recordSendRate.rrd"
                     }
                   },
                   "stringPropertyAttributes": {
                     "client-id": "producer-1",
                     "domain": "kafka.producer",
-                    "topic": "Labmonkeys.Sink.Telemetry-IPFIX",
+                    "topic": "OpenNMS.Sink.Telemetry-IPFIX",
                     "type": "producer-topic-metrics"
                   },
                   "typeLabel": "Kafka Ingestion Rate"
@@ -9939,7 +9939,7 @@
                 "attribute": {
                   "label": "recordSendRate",
                   "name": "recordSendRate",
-                  "relativePath": "snmp/fs/Minions/edge-01/kafkaIngestionRate/Labmonkeys.Sink.Telemetry-sflow",
+                  "relativePath": "snmp/fs/Minions/edge-01/kafkaIngestionRate/OpenNMS.Sink.Telemetry-sflow",
                   "rrdFile": "recordSendRate.rrd"
                 },
                 "label": "send",
@@ -9953,21 +9953,21 @@
                     "resource": []
                   },
                   "externalValueAttributes": {},
-                  "id": "kafkaIngestionRate[Labmonkeys.Sink.Telemetry-sflow]",
-                  "label": "Labmonkeys.Sink.Telemetry-sflow",
-                  "name": "Labmonkeys.Sink.Telemetry-sflow",
+                  "id": "kafkaIngestionRate[OpenNMS.Sink.Telemetry-sflow]",
+                  "label": "OpenNMS.Sink.Telemetry-sflow",
+                  "name": "OpenNMS.Sink.Telemetry-sflow",
                   "parentId": "node[Minions:edge-01]",
                   "rrdGraphAttributes": {
                     "recordSendRate": {
                       "name": "recordSendRate",
-                      "relativePath": "snmp/fs/Minions/edge-01/kafkaIngestionRate/Labmonkeys.Sink.Telemetry-sflow",
+                      "relativePath": "snmp/fs/Minions/edge-01/kafkaIngestionRate/OpenNMS.Sink.Telemetry-sflow",
                       "rrdFile": "recordSendRate.rrd"
                     }
                   },
                   "stringPropertyAttributes": {
                     "client-id": "producer-1",
                     "domain": "kafka.producer",
-                    "topic": "Labmonkeys.Sink.Telemetry-sflow",
+                    "topic": "OpenNMS.Sink.Telemetry-sflow",
                     "type": "producer-topic-metrics"
                   },
                   "typeLabel": "Kafka Ingestion Rate"
