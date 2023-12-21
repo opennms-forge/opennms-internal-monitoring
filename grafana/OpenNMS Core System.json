@@ -83,7 +83,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "10.1.4",
+      "pluginVersion": "10.1.5",
       "targets": [
         {
           "attribute": {
@@ -196,7 +196,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "10.1.4",
+      "pluginVersion": "10.1.5",
       "targets": [
         {
           "attribute": {
@@ -267,6 +267,131 @@
         "type": "opennms-performance-datasource",
         "uid": "${dataSource}"
       },
+      "description": "Number of alarms in the database",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "purple",
+                "value": null
+              }
+            ]
+          },
+          "unit": "decbytes"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 2,
+        "x": 4,
+        "y": 1
+      },
+      "id": 48,
+      "interval": "30m",
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "10.1.5",
+      "targets": [
+        {
+          "attribute": {
+            "attribute": {
+              "label": "db_size",
+              "name": "db_size",
+              "relativePath": "snmp/65541/pgDatabase/opennms_horizon",
+              "rrdFile": "db_size.rrd"
+            },
+            "label": "Database Size",
+            "node": {
+              "label": "$node",
+              "value": "$node"
+            },
+            "resource": {
+              "children": {
+                "offset": 0,
+                "resource": []
+              },
+              "externalValueAttributes": {},
+              "id": "pgDatabase[labmonkeys_prod_hzndb]",
+              "label": "labmonkeys_prod_hzndb",
+              "name": "labmonkeys_prod_hzndb",
+              "parentId": "node[selfmonitor:1]",
+              "rrdGraphAttributes": {
+                "blks_hit": {
+                  "name": "blks_hit",
+                  "relativePath": "snmp/fs/selfmonitor/1/pgDatabase/labmonkeys_prod_hzndb",
+                  "rrdFile": "blks_hit.rrd"
+                },
+                "blks_read": {
+                  "name": "blks_read",
+                  "relativePath": "snmp/fs/selfmonitor/1/pgDatabase/labmonkeys_prod_hzndb",
+                  "rrdFile": "blks_read.rrd"
+                },
+                "db_size": {
+                  "name": "db_size",
+                  "relativePath": "snmp/fs/selfmonitor/1/pgDatabase/labmonkeys_prod_hzndb",
+                  "rrdFile": "db_size.rrd"
+                },
+                "numbackends": {
+                  "name": "numbackends",
+                  "relativePath": "snmp/fs/selfmonitor/1/pgDatabase/labmonkeys_prod_hzndb",
+                  "rrdFile": "numbackends.rrd"
+                },
+                "xact_commit": {
+                  "name": "xact_commit",
+                  "relativePath": "snmp/fs/selfmonitor/1/pgDatabase/labmonkeys_prod_hzndb",
+                  "rrdFile": "xact_commit.rrd"
+                },
+                "xact_rollback": {
+                  "name": "xact_rollback",
+                  "relativePath": "snmp/fs/selfmonitor/1/pgDatabase/labmonkeys_prod_hzndb",
+                  "rrdFile": "xact_rollback.rrd"
+                }
+              },
+              "stringPropertyAttributes": {
+                "datname": "labmonkeys_prod_hzndb"
+              },
+              "typeLabel": "PostgreSQL Database"
+            }
+          },
+          "datasource": {
+            "type": "opennms-performance-datasource",
+            "uid": "${dataSource}"
+          },
+          "hide": false,
+          "performanceType": {
+            "label": "Attribute",
+            "value": 1
+          },
+          "refId": "A"
+        }
+      ],
+      "title": "Database Size",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "opennms-performance-datasource",
+        "uid": "${dataSource}"
+      },
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -294,8 +419,8 @@
       },
       "gridPos": {
         "h": 2,
-        "w": 5,
-        "x": 4,
+        "w": 4,
+        "x": 6,
         "y": 1
       },
       "id": 12,
@@ -315,7 +440,7 @@
         "showUnfilled": true,
         "valueMode": "color"
       },
-      "pluginVersion": "10.1.4",
+      "pluginVersion": "10.1.5",
       "targets": [
         {
           "attribute": {
@@ -2454,7 +2579,7 @@
       "gridPos": {
         "h": 2,
         "w": 5,
-        "x": 9,
+        "x": 10,
         "y": 1
       },
       "id": 16,
@@ -2474,7 +2599,7 @@
         "showUnfilled": true,
         "valueMode": "color"
       },
-      "pluginVersion": "10.1.4",
+      "pluginVersion": "10.1.5",
       "targets": [
         {
           "attribute": {
@@ -4598,7 +4723,7 @@
       "gridPos": {
         "h": 2,
         "w": 5,
-        "x": 14,
+        "x": 15,
         "y": 1
       },
       "id": 23,
@@ -4618,7 +4743,7 @@
         "showUnfilled": true,
         "valueMode": "color"
       },
-      "pluginVersion": "10.1.4",
+      "pluginVersion": "10.1.5",
       "targets": [
         {
           "attribute": {
@@ -6742,8 +6867,8 @@
       },
       "gridPos": {
         "h": 2,
-        "w": 5,
-        "x": 19,
+        "w": 4,
+        "x": 20,
         "y": 1
       },
       "id": 38,
@@ -6763,7 +6888,7 @@
         "showUnfilled": true,
         "valueMode": "color"
       },
-      "pluginVersion": "10.1.4",
+      "pluginVersion": "10.1.5",
       "targets": [
         {
           "attribute": {
@@ -8881,8 +9006,8 @@
       },
       "gridPos": {
         "h": 2,
-        "w": 5,
-        "x": 4,
+        "w": 4,
+        "x": 6,
         "y": 3
       },
       "id": 13,
@@ -8902,7 +9027,7 @@
         "showUnfilled": true,
         "valueMode": "color"
       },
-      "pluginVersion": "10.1.4",
+      "pluginVersion": "10.1.5",
       "targets": [
         {
           "attribute": {
@@ -11025,7 +11150,7 @@
       "gridPos": {
         "h": 2,
         "w": 5,
-        "x": 9,
+        "x": 10,
         "y": 3
       },
       "id": 19,
@@ -11045,7 +11170,7 @@
         "showUnfilled": true,
         "valueMode": "color"
       },
-      "pluginVersion": "10.1.4",
+      "pluginVersion": "10.1.5",
       "targets": [
         {
           "attribute": {
@@ -13168,7 +13293,7 @@
       "gridPos": {
         "h": 2,
         "w": 5,
-        "x": 14,
+        "x": 15,
         "y": 3
       },
       "id": 24,
@@ -13188,7 +13313,7 @@
         "showUnfilled": true,
         "valueMode": "color"
       },
-      "pluginVersion": "10.1.4",
+      "pluginVersion": "10.1.5",
       "targets": [
         {
           "attribute": {
@@ -15310,8 +15435,8 @@
       },
       "gridPos": {
         "h": 2,
-        "w": 5,
-        "x": 19,
+        "w": 4,
+        "x": 20,
         "y": 3
       },
       "id": 40,
@@ -15331,7 +15456,7 @@
         "showUnfilled": true,
         "valueMode": "color"
       },
-      "pluginVersion": "10.1.4",
+      "pluginVersion": "10.1.5",
       "targets": [
         {
           "attribute": {
@@ -17464,7 +17589,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "10.1.4",
+      "pluginVersion": "10.1.5",
       "targets": [
         {
           "attribute": {
@@ -17577,7 +17702,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "10.1.4",
+      "pluginVersion": "10.1.5",
       "targets": [
         {
           "attribute": {
@@ -17648,6 +17773,106 @@
         "type": "opennms-performance-datasource",
         "uid": "${dataSource}"
       },
+      "description": "Number of alarms in the database",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "purple",
+                "value": null
+              }
+            ]
+          },
+          "unit": "decbytes"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 2,
+        "x": 4,
+        "y": 5
+      },
+      "id": 49,
+      "interval": "30m",
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "10.1.5",
+      "targets": [
+        {
+          "attribute": {
+            "attribute": {
+              "label": "ts_size",
+              "name": "ts_size",
+              "relativePath": "snmp/65541/pgTableSpace/pg_default",
+              "rrdFile": "ts_size.rrd"
+            },
+            "label": "Tablespace Size",
+            "node": {
+              "label": "$node",
+              "value": "$node"
+            },
+            "resource": {
+              "children": {
+                "offset": 0,
+                "resource": []
+              },
+              "externalValueAttributes": {},
+              "id": "pgTableSpace[pg_default]",
+              "label": "pg_default",
+              "name": "pg_default",
+              "parentId": "node[selfmonitor:1]",
+              "rrdGraphAttributes": {
+                "ts_size": {
+                  "name": "ts_size",
+                  "relativePath": "snmp/65541/pgTableSpace/pg_default",
+                  "rrdFile": "ts_size.rrd"
+                }
+              },
+              "stringPropertyAttributes": {
+                "spcname": "pg_default"
+              },
+              "typeLabel": "PostgreSQL Tablespace"
+            }
+          },
+          "datasource": {
+            "type": "opennms-performance-datasource",
+            "uid": "${dataSource}"
+          },
+          "hide": false,
+          "performanceType": {
+            "label": "Attribute",
+            "value": 1
+          },
+          "refId": "A"
+        }
+      ],
+      "title": "Tablespace Size",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "opennms-performance-datasource",
+        "uid": "${dataSource}"
+      },
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -17686,8 +17911,8 @@
       },
       "gridPos": {
         "h": 2,
-        "w": 5,
-        "x": 4,
+        "w": 4,
+        "x": 6,
         "y": 5
       },
       "id": 14,
@@ -17708,7 +17933,7 @@
         "text": {},
         "valueMode": "color"
       },
-      "pluginVersion": "10.1.4",
+      "pluginVersion": "10.1.5",
       "targets": [
         {
           "attribute": {
@@ -19846,7 +20071,7 @@
       "gridPos": {
         "h": 4,
         "w": 5,
-        "x": 9,
+        "x": 10,
         "y": 5
       },
       "id": 18,
@@ -19865,7 +20090,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "10.1.4",
+      "pluginVersion": "10.1.5",
       "targets": [
         {
           "attribute": {
@@ -20937,7 +21162,7 @@
       "gridPos": {
         "h": 4,
         "w": 5,
-        "x": 14,
+        "x": 15,
         "y": 5
       },
       "id": 28,
@@ -20956,7 +21181,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "10.1.4",
+      "pluginVersion": "10.1.5",
       "targets": [
         {
           "attribute": {
@@ -22029,8 +22254,8 @@
       },
       "gridPos": {
         "h": 2,
-        "w": 5,
-        "x": 19,
+        "w": 4,
+        "x": 20,
         "y": 5
       },
       "id": 39,
@@ -22050,7 +22275,7 @@
         "showUnfilled": true,
         "valueMode": "color"
       },
-      "pluginVersion": "10.1.4",
+      "pluginVersion": "10.1.5",
       "targets": [
         {
           "attribute": {
@@ -24168,8 +24393,8 @@
       },
       "gridPos": {
         "h": 2,
-        "w": 5,
-        "x": 4,
+        "w": 4,
+        "x": 6,
         "y": 7
       },
       "id": 15,
@@ -24189,7 +24414,7 @@
         "showUnfilled": true,
         "valueMode": "color"
       },
-      "pluginVersion": "10.1.4",
+      "pluginVersion": "10.1.5",
       "targets": [
         {
           "attribute": {
@@ -26311,8 +26536,8 @@
       },
       "gridPos": {
         "h": 2,
-        "w": 5,
-        "x": 19,
+        "w": 4,
+        "x": 20,
         "y": 7
       },
       "id": 41,
@@ -26332,7 +26557,7 @@
         "showUnfilled": true,
         "valueMode": "color"
       },
-      "pluginVersion": "10.1.4",
+      "pluginVersion": "10.1.5",
       "targets": [
         {
           "attribute": {
@@ -40343,12 +40568,649 @@
       "type": "timeseries"
     },
     {
-      "collapsed": true,
+      "collapsed": false,
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
         "y": 28
+      },
+      "id": 44,
+      "panels": [],
+      "title": "PostgreSQL Database",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "opennms-performance-datasource",
+        "uid": "${dataSource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 10,
+        "w": 8,
+        "x": 0,
+        "y": 29
+      },
+      "id": 45,
+      "options": {
+        "legend": {
+          "calcs": [
+            "last",
+            "min",
+            "max",
+            "mean"
+          ],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "attribute": {
+            "attribute": {
+              "label": "xact_commit",
+              "name": "xact_commit",
+              "relativePath": "snmp/fs/selfmonitor/1/pgDatabase/postgres",
+              "rrdFile": "xact_commit.rrd"
+            },
+            "label": "commits",
+            "node": {
+              "label": "$node",
+              "value": "$node"
+            },
+            "resource": {
+              "children": {
+                "offset": 0,
+                "resource": []
+              },
+              "externalValueAttributes": {},
+              "id": "pgDatabase[labmonkeys_prod_hzndb]",
+              "label": "labmonkeys_prod_hzndb",
+              "name": "labmonkeys_prod_hzndb",
+              "parentId": "node[selfmonitor:1]",
+              "rrdGraphAttributes": {
+                "blks_hit": {
+                  "name": "blks_hit",
+                  "relativePath": "snmp/fs/selfmonitor/1/pgDatabase/labmonkeys_prod_hzndb",
+                  "rrdFile": "blks_hit.rrd"
+                },
+                "blks_read": {
+                  "name": "blks_read",
+                  "relativePath": "snmp/fs/selfmonitor/1/pgDatabase/labmonkeys_prod_hzndb",
+                  "rrdFile": "blks_read.rrd"
+                },
+                "db_size": {
+                  "name": "db_size",
+                  "relativePath": "snmp/fs/selfmonitor/1/pgDatabase/labmonkeys_prod_hzndb",
+                  "rrdFile": "db_size.rrd"
+                },
+                "numbackends": {
+                  "name": "numbackends",
+                  "relativePath": "snmp/fs/selfmonitor/1/pgDatabase/labmonkeys_prod_hzndb",
+                  "rrdFile": "numbackends.rrd"
+                },
+                "xact_commit": {
+                  "name": "xact_commit",
+                  "relativePath": "snmp/fs/selfmonitor/1/pgDatabase/labmonkeys_prod_hzndb",
+                  "rrdFile": "xact_commit.rrd"
+                },
+                "xact_rollback": {
+                  "name": "xact_rollback",
+                  "relativePath": "snmp/fs/selfmonitor/1/pgDatabase/labmonkeys_prod_hzndb",
+                  "rrdFile": "xact_rollback.rrd"
+                }
+              },
+              "stringPropertyAttributes": {
+                "datname": "labmonkeys_prod_hzndb"
+              },
+              "typeLabel": "PostgreSQL Database"
+            },
+            "subAttribute": ""
+          },
+          "datasource": {
+            "type": "opennms-performance-datasource",
+            "uid": "${dataSource}"
+          },
+          "performanceType": {
+            "label": "Attribute",
+            "value": 1
+          },
+          "refId": "A"
+        },
+        {
+          "attribute": {
+            "attribute": {
+              "label": "xact_rollback",
+              "name": "xact_rollback",
+              "relativePath": "snmp/65541/pgDatabase/postgres",
+              "rrdFile": "xact_rollback.rrd"
+            },
+            "label": "rollback",
+            "node": {
+              "label": "$node",
+              "value": "$node"
+            },
+            "resource": {
+              "children": {
+                "offset": 0,
+                "resource": []
+              },
+              "externalValueAttributes": {},
+              "id": "pgDatabase[labmonkeys_prod_hzndb]",
+              "label": "labmonkeys_prod_hzndb",
+              "name": "labmonkeys_prod_hzndb",
+              "parentId": "node[selfmonitor:1]",
+              "rrdGraphAttributes": {
+                "blks_hit": {
+                  "name": "blks_hit",
+                  "relativePath": "snmp/fs/selfmonitor/1/pgDatabase/labmonkeys_prod_hzndb",
+                  "rrdFile": "blks_hit.rrd"
+                },
+                "blks_read": {
+                  "name": "blks_read",
+                  "relativePath": "snmp/fs/selfmonitor/1/pgDatabase/labmonkeys_prod_hzndb",
+                  "rrdFile": "blks_read.rrd"
+                },
+                "db_size": {
+                  "name": "db_size",
+                  "relativePath": "snmp/fs/selfmonitor/1/pgDatabase/labmonkeys_prod_hzndb",
+                  "rrdFile": "db_size.rrd"
+                },
+                "numbackends": {
+                  "name": "numbackends",
+                  "relativePath": "snmp/fs/selfmonitor/1/pgDatabase/labmonkeys_prod_hzndb",
+                  "rrdFile": "numbackends.rrd"
+                },
+                "xact_commit": {
+                  "name": "xact_commit",
+                  "relativePath": "snmp/fs/selfmonitor/1/pgDatabase/labmonkeys_prod_hzndb",
+                  "rrdFile": "xact_commit.rrd"
+                },
+                "xact_rollback": {
+                  "name": "xact_rollback",
+                  "relativePath": "snmp/fs/selfmonitor/1/pgDatabase/labmonkeys_prod_hzndb",
+                  "rrdFile": "xact_rollback.rrd"
+                }
+              },
+              "stringPropertyAttributes": {
+                "datname": "labmonkeys_prod_hzndb"
+              },
+              "typeLabel": "PostgreSQL Database"
+            },
+            "subAttribute": ""
+          },
+          "datasource": {
+            "type": "opennms-performance-datasource",
+            "uid": "${dataSource}"
+          },
+          "hide": false,
+          "performanceType": {
+            "label": "Attribute",
+            "value": 1
+          },
+          "refId": "B"
+        }
+      ],
+      "title": "PostgreSQL Transactions",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "opennms-performance-datasource",
+        "uid": "${dataSource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 10,
+        "w": 8,
+        "x": 8,
+        "y": 29
+      },
+      "id": 46,
+      "options": {
+        "legend": {
+          "calcs": [
+            "last",
+            "min",
+            "max",
+            "mean"
+          ],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "attribute": {
+            "attribute": {
+              "label": "blks_hit",
+              "name": "blks_hit",
+              "relativePath": "snmp/65541/pgDatabase/opennms_horizon",
+              "rrdFile": "blks_hit.rrd"
+            },
+            "label": "blocks hit",
+            "node": {
+              "label": "$node",
+              "value": "$node"
+            },
+            "resource": {
+              "children": {
+                "offset": 0,
+                "resource": []
+              },
+              "externalValueAttributes": {},
+              "id": "pgDatabase[labmonkeys_prod_hzndb]",
+              "label": "labmonkeys_prod_hzndb",
+              "name": "labmonkeys_prod_hzndb",
+              "parentId": "node[selfmonitor:1]",
+              "rrdGraphAttributes": {
+                "blks_hit": {
+                  "name": "blks_hit",
+                  "relativePath": "snmp/fs/selfmonitor/1/pgDatabase/labmonkeys_prod_hzndb",
+                  "rrdFile": "blks_hit.rrd"
+                },
+                "blks_read": {
+                  "name": "blks_read",
+                  "relativePath": "snmp/fs/selfmonitor/1/pgDatabase/labmonkeys_prod_hzndb",
+                  "rrdFile": "blks_read.rrd"
+                },
+                "db_size": {
+                  "name": "db_size",
+                  "relativePath": "snmp/fs/selfmonitor/1/pgDatabase/labmonkeys_prod_hzndb",
+                  "rrdFile": "db_size.rrd"
+                },
+                "numbackends": {
+                  "name": "numbackends",
+                  "relativePath": "snmp/fs/selfmonitor/1/pgDatabase/labmonkeys_prod_hzndb",
+                  "rrdFile": "numbackends.rrd"
+                },
+                "xact_commit": {
+                  "name": "xact_commit",
+                  "relativePath": "snmp/fs/selfmonitor/1/pgDatabase/labmonkeys_prod_hzndb",
+                  "rrdFile": "xact_commit.rrd"
+                },
+                "xact_rollback": {
+                  "name": "xact_rollback",
+                  "relativePath": "snmp/fs/selfmonitor/1/pgDatabase/labmonkeys_prod_hzndb",
+                  "rrdFile": "xact_rollback.rrd"
+                }
+              },
+              "stringPropertyAttributes": {
+                "datname": "labmonkeys_prod_hzndb"
+              },
+              "typeLabel": "PostgreSQL Database"
+            },
+            "subAttribute": ""
+          },
+          "datasource": {
+            "type": "opennms-performance-datasource",
+            "uid": "${dataSource}"
+          },
+          "performanceType": {
+            "label": "Attribute",
+            "value": 1
+          },
+          "refId": "A"
+        },
+        {
+          "attribute": {
+            "attribute": {
+              "label": "blks_read",
+              "name": "blks_read",
+              "relativePath": "snmp/65541/pgDatabase/opennms_horizon",
+              "rrdFile": "blks_read.rrd"
+            },
+            "label": "blocks read",
+            "node": {
+              "label": "$node",
+              "value": "$node"
+            },
+            "resource": {
+              "children": {
+                "offset": 0,
+                "resource": []
+              },
+              "externalValueAttributes": {},
+              "id": "pgDatabase[opennms_horizon]",
+              "label": "opennms_horizon",
+              "name": "opennms_horizon",
+              "parentId": "node[selfmonitor:1]",
+              "rrdGraphAttributes": {
+                "blks_hit": {
+                  "name": "blks_hit",
+                  "relativePath": "snmp/65541/pgDatabase/opennms_horizon",
+                  "rrdFile": "blks_hit.rrd"
+                },
+                "blks_read": {
+                  "name": "blks_read",
+                  "relativePath": "snmp/65541/pgDatabase/opennms_horizon",
+                  "rrdFile": "blks_read.rrd"
+                },
+                "db_size": {
+                  "name": "db_size",
+                  "relativePath": "snmp/65541/pgDatabase/opennms_horizon",
+                  "rrdFile": "db_size.rrd"
+                },
+                "numbackends": {
+                  "name": "numbackends",
+                  "relativePath": "snmp/65541/pgDatabase/opennms_horizon",
+                  "rrdFile": "numbackends.rrd"
+                },
+                "xact_commit": {
+                  "name": "xact_commit",
+                  "relativePath": "snmp/65541/pgDatabase/opennms_horizon",
+                  "rrdFile": "xact_commit.rrd"
+                },
+                "xact_rollback": {
+                  "name": "xact_rollback",
+                  "relativePath": "snmp/65541/pgDatabase/opennms_horizon",
+                  "rrdFile": "xact_rollback.rrd"
+                }
+              },
+              "stringPropertyAttributes": {
+                "datname": "opennms_horizon"
+              },
+              "typeLabel": "PostgreSQL Database"
+            },
+            "subAttribute": ""
+          },
+          "datasource": {
+            "type": "opennms-performance-datasource",
+            "uid": "${dataSource}"
+          },
+          "hide": false,
+          "performanceType": {
+            "label": "Attribute",
+            "value": 1
+          },
+          "refId": "B"
+        }
+      ],
+      "title": "PostgreSQL Disk Read",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "opennms-performance-datasource",
+        "uid": "${dataSource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "decbytes"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 10,
+        "w": 8,
+        "x": 16,
+        "y": 29
+      },
+      "id": 47,
+      "options": {
+        "legend": {
+          "calcs": [
+            "last",
+            "min",
+            "max",
+            "mean"
+          ],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "attribute": {
+            "attribute": {
+              "label": "db_size",
+              "name": "db_size",
+              "relativePath": "snmp/65541/pgDatabase/opennms_horizon",
+              "rrdFile": "db_size.rrd"
+            },
+            "label": "size",
+            "node": {
+              "label": "$node",
+              "value": "$node"
+            },
+            "resource": {
+              "children": {
+                "offset": 0,
+                "resource": []
+              },
+              "externalValueAttributes": {},
+              "id": "pgDatabase[labmonkeys_prod_hzndb]",
+              "label": "labmonkeys_prod_hzndb",
+              "name": "labmonkeys_prod_hzndb",
+              "parentId": "node[selfmonitor:1]",
+              "rrdGraphAttributes": {
+                "blks_hit": {
+                  "name": "blks_hit",
+                  "relativePath": "snmp/fs/selfmonitor/1/pgDatabase/labmonkeys_prod_hzndb",
+                  "rrdFile": "blks_hit.rrd"
+                },
+                "blks_read": {
+                  "name": "blks_read",
+                  "relativePath": "snmp/fs/selfmonitor/1/pgDatabase/labmonkeys_prod_hzndb",
+                  "rrdFile": "blks_read.rrd"
+                },
+                "db_size": {
+                  "name": "db_size",
+                  "relativePath": "snmp/fs/selfmonitor/1/pgDatabase/labmonkeys_prod_hzndb",
+                  "rrdFile": "db_size.rrd"
+                },
+                "numbackends": {
+                  "name": "numbackends",
+                  "relativePath": "snmp/fs/selfmonitor/1/pgDatabase/labmonkeys_prod_hzndb",
+                  "rrdFile": "numbackends.rrd"
+                },
+                "xact_commit": {
+                  "name": "xact_commit",
+                  "relativePath": "snmp/fs/selfmonitor/1/pgDatabase/labmonkeys_prod_hzndb",
+                  "rrdFile": "xact_commit.rrd"
+                },
+                "xact_rollback": {
+                  "name": "xact_rollback",
+                  "relativePath": "snmp/fs/selfmonitor/1/pgDatabase/labmonkeys_prod_hzndb",
+                  "rrdFile": "xact_rollback.rrd"
+                }
+              },
+              "stringPropertyAttributes": {
+                "datname": "labmonkeys_prod_hzndb"
+              },
+              "typeLabel": "PostgreSQL Database"
+            },
+            "subAttribute": ""
+          },
+          "datasource": {
+            "type": "opennms-performance-datasource",
+            "uid": "${dataSource}"
+          },
+          "performanceType": {
+            "label": "Attribute",
+            "value": 1
+          },
+          "refId": "A"
+        }
+      ],
+      "title": "Database Size",
+      "type": "timeseries"
+    },
+    {
+      "collapsed": true,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 39
       },
       "id": 1,
       "panels": [
@@ -40400,8 +41262,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -40469,7 +41330,7 @@
             "h": 10,
             "w": 12,
             "x": 0,
-            "y": 37
+            "y": 12
           },
           "id": 8,
           "options": {
@@ -43652,8 +44513,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -43706,7 +44566,7 @@
             "h": 10,
             "w": 12,
             "x": 12,
-            "y": 37
+            "y": 12
           },
           "id": 9,
           "options": {
@@ -46849,7 +47709,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 29
+        "y": 40
       },
       "id": 20,
       "panels": [
@@ -46901,8 +47761,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -46970,7 +47829,7 @@
             "h": 10,
             "w": 12,
             "x": 0,
-            "y": 48
+            "y": 56
           },
           "id": 21,
           "options": {
@@ -49122,8 +49981,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -49176,7 +50034,7 @@
             "h": 10,
             "w": 12,
             "x": 12,
-            "y": 48
+            "y": 56
           },
           "id": 22,
           "options": {
@@ -52318,7 +53176,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 30
+        "y": 41
       },
       "id": 26,
       "panels": [
@@ -52370,8 +53228,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -52438,7 +53295,7 @@
             "h": 10,
             "w": 6,
             "x": 0,
-            "y": 13
+            "y": 32
           },
           "id": 32,
           "options": {
@@ -54592,8 +55449,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -54691,7 +55547,7 @@
             "h": 10,
             "w": 6,
             "x": 6,
-            "y": 13
+            "y": 32
           },
           "id": 33,
           "options": {
@@ -56845,8 +57701,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -56944,7 +57799,7 @@
             "h": 10,
             "w": 6,
             "x": 12,
-            "y": 13
+            "y": 32
           },
           "id": 34,
           "options": {
@@ -59098,8 +59953,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -59167,7 +60021,7 @@
             "h": 10,
             "w": 6,
             "x": 18,
-            "y": 13
+            "y": 32
           },
           "id": 42,
           "options": {
@@ -61321,8 +62175,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -61375,7 +62228,7 @@
             "h": 10,
             "w": 6,
             "x": 0,
-            "y": 23
+            "y": 42
           },
           "id": 35,
           "options": {
@@ -64555,8 +65408,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -64609,7 +65461,7 @@
             "h": 10,
             "w": 6,
             "x": 6,
-            "y": 23
+            "y": 42
           },
           "id": 36,
           "options": {
@@ -67789,8 +68641,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -67843,7 +68694,7 @@
             "h": 10,
             "w": 6,
             "x": 12,
-            "y": 23
+            "y": 42
           },
           "id": 37,
           "options": {
@@ -71023,8 +71874,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -71077,7 +71927,7 @@
             "h": 10,
             "w": 6,
             "x": 18,
-            "y": 23
+            "y": 42
           },
           "id": 43,
           "options": {
@@ -74245,7 +75095,11 @@
         "type": "datasource"
       },
       {
-        "current": {},
+        "current": {
+          "selected": false,
+          "text": "localhost",
+          "value": "selfmonitor:1"
+        },
         "datasource": {
           "type": "opennms-performance-datasource",
           "uid": "${dataSource}"
@@ -74277,4 +75131,3 @@
   "version": 1,
   "weekStart": ""
 }
-
