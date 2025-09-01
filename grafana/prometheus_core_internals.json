@@ -2229,7 +2229,7 @@
             "h": 9,
             "w": 24,
             "x": 0,
-            "y": 428
+            "y": 1449
           },
           "id": 22,
           "interval": "30s",
@@ -3402,7 +3402,7 @@
             "h": 10,
             "w": 6,
             "x": 0,
-            "y": 56
+            "y": 1077
           },
           "id": 24,
           "options": {
@@ -3655,7 +3655,7 @@
             "h": 10,
             "w": 6,
             "x": 6,
-            "y": 56
+            "y": 1077
           },
           "id": 25,
           "options": {
@@ -3908,7 +3908,7 @@
             "h": 10,
             "w": 6,
             "x": 12,
-            "y": 56
+            "y": 1077
           },
           "id": 26,
           "options": {
@@ -4161,7 +4161,7 @@
             "h": 10,
             "w": 6,
             "x": 18,
-            "y": 56
+            "y": 1077
           },
           "id": 27,
           "options": {
@@ -4384,7 +4384,7 @@
             "h": 10,
             "w": 6,
             "x": 0,
-            "y": 66
+            "y": 1087
           },
           "id": 28,
           "options": {
@@ -4596,7 +4596,7 @@
             "h": 10,
             "w": 6,
             "x": 6,
-            "y": 66
+            "y": 1087
           },
           "id": 29,
           "options": {
@@ -4808,7 +4808,7 @@
             "h": 10,
             "w": 6,
             "x": 12,
-            "y": 66
+            "y": 1087
           },
           "id": 30,
           "options": {
@@ -5020,7 +5020,7 @@
             "h": 10,
             "w": 6,
             "x": 18,
-            "y": 66
+            "y": 1087
           },
           "id": 31,
           "options": {
@@ -5223,7 +5223,7 @@
             "h": 10,
             "w": 12,
             "x": 0,
-            "y": 77
+            "y": 57
           },
           "id": 33,
           "options": {
@@ -5445,7 +5445,7 @@
             "h": 10,
             "w": 12,
             "x": 12,
-            "y": 77
+            "y": 57
           },
           "id": 34,
           "options": {
@@ -5568,7 +5568,7 @@
             "h": 10,
             "w": 12,
             "x": 0,
-            "y": 87
+            "y": 146
           },
           "id": 35,
           "options": {
@@ -5740,7 +5740,7 @@
             "h": 10,
             "w": 12,
             "x": 12,
-            "y": 87
+            "y": 146
           },
           "id": 36,
           "options": {
@@ -5921,7 +5921,7 @@
             "h": 9,
             "w": 24,
             "x": 0,
-            "y": 98
+            "y": 58
           },
           "id": 38,
           "options": {
@@ -5967,6 +5967,2298 @@
         }
       ],
       "title": "OpenNMS - Syslog",
+      "type": "row"
+    },
+    {
+      "collapsed": true,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 58
+      },
+      "id": 52,
+      "panels": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${prometheusDS}"
+          },
+          "description": "Statistics about reception of NetFlow v5 messages on Telemetryd adapter.",
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "palette-classic"
+              },
+              "custom": {
+                "axisBorderShow": false,
+                "axisCenteredZero": false,
+                "axisColorMode": "text",
+                "axisLabel": "messages",
+                "axisPlacement": "auto",
+                "barAlignment": 0,
+                "barWidthFactor": 0.6,
+                "drawStyle": "points",
+                "fillOpacity": 0,
+                "gradientMode": "none",
+                "hideFrom": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                },
+                "insertNulls": false,
+                "lineInterpolation": "linear",
+                "lineWidth": 1,
+                "pointSize": 4,
+                "scaleDistribution": {
+                  "type": "linear"
+                },
+                "showPoints": "never",
+                "spanNulls": false,
+                "stacking": {
+                  "group": "A",
+                  "mode": "none"
+                },
+                "thresholdsStyle": {
+                  "mode": "off"
+                }
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green",
+                    "value": 0
+                  },
+                  {
+                    "color": "red",
+                    "value": 80
+                  }
+                ]
+              },
+              "unit": "none"
+            },
+            "overrides": [
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "dropped"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "semi-dark-red",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "received"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "yellow",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "parsed"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "blue",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "converted"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "semi-dark-green",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "gridPos": {
+            "h": 14,
+            "w": 12,
+            "x": 0,
+            "y": 59
+          },
+          "id": 57,
+          "options": {
+            "legend": {
+              "calcs": [
+                "p99",
+                "p98",
+                "p95",
+                "min",
+                "max"
+              ],
+              "displayMode": "table",
+              "placement": "bottom",
+              "showLegend": true
+            },
+            "tooltip": {
+              "hideZeros": false,
+              "mode": "single",
+              "sort": "none"
+            }
+          },
+          "pluginVersion": "12.1.1",
+          "targets": [
+            {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "${DS_PROMETHEUS}"
+              },
+              "editorMode": "code",
+              "expr": "rate(org_opennms_netmgt_telemetry_adapters_netflow_5_netflow_5_adapter_entriesreceived_count{instance =~\"$instance\"}[1m])",
+              "instant": false,
+              "legendFormat": "received",
+              "range": true,
+              "refId": "A"
+            },
+            {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "${DS_PROMETHEUS}"
+              },
+              "editorMode": "code",
+              "expr": "rate(org_opennms_netmgt_telemetry_adapters_netflow_5_netflow_5_adapter_entriesparsed_count{instance =~\"$instance\"}[1m])",
+              "hide": false,
+              "instant": false,
+              "legendFormat": "parsed",
+              "range": true,
+              "refId": "B"
+            },
+            {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "${DS_PROMETHEUS}"
+              },
+              "editorMode": "code",
+              "expr": "rate(org_opennms_netmgt_telemetry_adapters_netflow_5_netflow_5_adapter_entriesconverted_count{instance =~\"$instance\"}[1m])",
+              "hide": false,
+              "instant": false,
+              "legendFormat": "converted",
+              "range": true,
+              "refId": "C"
+            },
+            {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "${prometheusDS}"
+              },
+              "editorMode": "code",
+              "expr": "rate(org_opennms_core_ipc_sink_consumer_telemetry_netflow_5_dropped_count{instance=~\"$instance\"}[1m])",
+              "hide": false,
+              "instant": false,
+              "legendFormat": "dropped",
+              "range": true,
+              "refId": "D"
+            }
+          ],
+          "title": "NetFlow v5 Reception Statistics",
+          "type": "timeseries"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
+          },
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "palette-classic"
+              },
+              "custom": {
+                "axisBorderShow": false,
+                "axisCenteredZero": false,
+                "axisColorMode": "text",
+                "axisLabel": "logs parsed",
+                "axisPlacement": "auto",
+                "barAlignment": 0,
+                "barWidthFactor": 0.6,
+                "drawStyle": "line",
+                "fillOpacity": 100,
+                "gradientMode": "none",
+                "hideFrom": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                },
+                "insertNulls": false,
+                "lineInterpolation": "linear",
+                "lineWidth": 0,
+                "pointSize": 5,
+                "scaleDistribution": {
+                  "type": "linear"
+                },
+                "showPoints": "auto",
+                "spanNulls": false,
+                "stacking": {
+                  "group": "A",
+                  "mode": "normal"
+                },
+                "thresholdsStyle": {
+                  "mode": "off"
+                }
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green",
+                    "value": 0
+                  },
+                  {
+                    "color": "red",
+                    "value": 80
+                  }
+                ]
+              }
+            },
+            "overrides": [
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "50th percentile"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "purple",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "75th percentile"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "blue",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "95th percentile"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "green",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "98th percentile"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "yellow",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "99th percentile"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "orange",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "99.9th percentile"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "red",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "gridPos": {
+            "h": 14,
+            "w": 12,
+            "x": 12,
+            "y": 59
+          },
+          "id": 61,
+          "options": {
+            "legend": {
+              "calcs": [
+                "lastNotNull"
+              ],
+              "displayMode": "table",
+              "placement": "bottom",
+              "showLegend": true
+            },
+            "tooltip": {
+              "hideZeros": false,
+              "mode": "single",
+              "sort": "none"
+            }
+          },
+          "pluginVersion": "12.1.1",
+          "targets": [
+            {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "${prometheusDS}"
+              },
+              "editorMode": "code",
+              "expr": "org_opennms_netmgt_telemetry_adapters_netflow_5_netflow_5_adapter_logparsing_50thpercentile{instance=~\"$instance\"}",
+              "instant": false,
+              "legendFormat": "50th percentile",
+              "range": true,
+              "refId": "A"
+            },
+            {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "${DS_PROMETHEUS}"
+              },
+              "editorMode": "code",
+              "expr": "org_opennms_netmgt_telemetry_adapters_netflow_5_netflow_5_adapter_logparsing_75thpercentile{instance=~\"$instance\"}",
+              "hide": false,
+              "instant": false,
+              "legendFormat": "75th percentile",
+              "range": true,
+              "refId": "B"
+            },
+            {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "${prometheusDS}"
+              },
+              "editorMode": "code",
+              "expr": "org_opennms_netmgt_telemetry_adapters_netflow_5_netflow_5_adapter_logparsing_95thpercentile{instance=~\"$instance\"}",
+              "hide": false,
+              "instant": false,
+              "legendFormat": "95th percentile",
+              "range": true,
+              "refId": "C"
+            },
+            {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "${DS_PROMETHEUS}"
+              },
+              "editorMode": "code",
+              "expr": "org_opennms_netmgt_telemetry_adapters_netflow_5_netflow_5_adapter_logparsing_98thpercentile{instance=~\"$instance\"}",
+              "hide": false,
+              "instant": false,
+              "legendFormat": "98th percentile",
+              "range": true,
+              "refId": "D"
+            },
+            {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "${prometheusDS}"
+              },
+              "editorMode": "code",
+              "expr": "org_opennms_netmgt_telemetry_adapters_netflow_5_netflow_5_adapter_logparsing_99thpercentile{instance=~\"$instance\"}",
+              "hide": false,
+              "instant": false,
+              "legendFormat": "99th percentile",
+              "range": true,
+              "refId": "E"
+            },
+            {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "${DS_PROMETHEUS}"
+              },
+              "editorMode": "code",
+              "expr": "org_opennms_netmgt_telemetry_adapters_netflow_5_netflow_5_adapter_logparsing_999thpercentile{instance=~\"$instance\"}",
+              "hide": false,
+              "instant": false,
+              "legendFormat": "99.9th percentile",
+              "range": true,
+              "refId": "F"
+            }
+          ],
+          "title": "NetFlow v5 Log parsing statistics",
+          "type": "timeseries"
+        }
+      ],
+      "title": "OpenNMS - NetFlow v5",
+      "type": "row"
+    },
+    {
+      "collapsed": true,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 59
+      },
+      "id": 54,
+      "panels": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${prometheusDS}"
+          },
+          "description": "Statistics about reception of NetFlow v9 messages on Telemetryd adapter.",
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "palette-classic"
+              },
+              "custom": {
+                "axisBorderShow": false,
+                "axisCenteredZero": false,
+                "axisColorMode": "text",
+                "axisLabel": "messages",
+                "axisPlacement": "auto",
+                "barAlignment": 0,
+                "barWidthFactor": 0.6,
+                "drawStyle": "points",
+                "fillOpacity": 0,
+                "gradientMode": "none",
+                "hideFrom": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                },
+                "insertNulls": false,
+                "lineInterpolation": "linear",
+                "lineWidth": 1,
+                "pointSize": 4,
+                "scaleDistribution": {
+                  "type": "linear"
+                },
+                "showPoints": "never",
+                "spanNulls": false,
+                "stacking": {
+                  "group": "A",
+                  "mode": "none"
+                },
+                "thresholdsStyle": {
+                  "mode": "off"
+                }
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green",
+                    "value": 0
+                  },
+                  {
+                    "color": "red",
+                    "value": 80
+                  }
+                ]
+              },
+              "unit": "none"
+            },
+            "overrides": [
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "dropped"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "semi-dark-red",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "received"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "yellow",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "parsed"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "blue",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "converted"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "semi-dark-green",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "gridPos": {
+            "h": 14,
+            "w": 12,
+            "x": 0,
+            "y": 60
+          },
+          "id": 66,
+          "options": {
+            "legend": {
+              "calcs": [
+                "p99",
+                "p98",
+                "p95",
+                "min",
+                "max"
+              ],
+              "displayMode": "table",
+              "placement": "bottom",
+              "showLegend": true
+            },
+            "tooltip": {
+              "hideZeros": false,
+              "mode": "single",
+              "sort": "none"
+            }
+          },
+          "pluginVersion": "12.1.1",
+          "targets": [
+            {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "${DS_PROMETHEUS}"
+              },
+              "editorMode": "code",
+              "expr": "rate(org_opennms_netmgt_telemetry_adapters_netflow_9_netflow_9_adapter_entriesreceived_count{instance =~\"$instance\"}[1m])",
+              "instant": false,
+              "legendFormat": "received",
+              "range": true,
+              "refId": "A"
+            },
+            {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "${DS_PROMETHEUS}"
+              },
+              "editorMode": "code",
+              "expr": "rate(org_opennms_netmgt_telemetry_adapters_netflow_9_netflow_9_adapter_entriesparsed_count{instance =~\"$instance\"}[1m])",
+              "hide": false,
+              "instant": false,
+              "legendFormat": "parsed",
+              "range": true,
+              "refId": "B"
+            },
+            {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "${DS_PROMETHEUS}"
+              },
+              "editorMode": "code",
+              "expr": "rate(org_opennms_netmgt_telemetry_adapters_netflow_9_netflow_9_adapter_entriesconverted_count{instance =~\"$instance\"}[1m])",
+              "hide": false,
+              "instant": false,
+              "legendFormat": "converted",
+              "range": true,
+              "refId": "C"
+            },
+            {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "${prometheusDS}"
+              },
+              "editorMode": "code",
+              "expr": "rate(org_opennms_core_ipc_sink_consumer_telemetry_netflow_9_dropped_count{instance=~\"$instance\"}[1m])",
+              "hide": false,
+              "instant": false,
+              "legendFormat": "dropped",
+              "range": true,
+              "refId": "D"
+            }
+          ],
+          "title": "NetFlow v9 Reception Statistics",
+          "type": "timeseries"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
+          },
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "palette-classic"
+              },
+              "custom": {
+                "axisBorderShow": false,
+                "axisCenteredZero": false,
+                "axisColorMode": "text",
+                "axisLabel": "logs parsed",
+                "axisPlacement": "auto",
+                "barAlignment": 0,
+                "barWidthFactor": 0.6,
+                "drawStyle": "line",
+                "fillOpacity": 100,
+                "gradientMode": "none",
+                "hideFrom": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                },
+                "insertNulls": false,
+                "lineInterpolation": "linear",
+                "lineWidth": 0,
+                "pointSize": 5,
+                "scaleDistribution": {
+                  "type": "linear"
+                },
+                "showPoints": "auto",
+                "spanNulls": false,
+                "stacking": {
+                  "group": "A",
+                  "mode": "normal"
+                },
+                "thresholdsStyle": {
+                  "mode": "off"
+                }
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green",
+                    "value": 0
+                  },
+                  {
+                    "color": "red",
+                    "value": 80
+                  }
+                ]
+              }
+            },
+            "overrides": [
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "50th percentile"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "purple",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "75th percentile"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "blue",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "95th percentile"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "green",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "98th percentile"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "yellow",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "99th percentile"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "orange",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "99.9th percentile"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "red",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "gridPos": {
+            "h": 14,
+            "w": 12,
+            "x": 12,
+            "y": 60
+          },
+          "id": 67,
+          "options": {
+            "legend": {
+              "calcs": [
+                "lastNotNull"
+              ],
+              "displayMode": "table",
+              "placement": "bottom",
+              "showLegend": true
+            },
+            "tooltip": {
+              "hideZeros": false,
+              "mode": "single",
+              "sort": "none"
+            }
+          },
+          "pluginVersion": "12.1.1",
+          "targets": [
+            {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "${prometheusDS}"
+              },
+              "editorMode": "code",
+              "expr": "org_opennms_netmgt_telemetry_adapters_netflow_9_netflow_9_adapter_logparsing_50thpercentile{instance=~\"$instance\"}",
+              "instant": false,
+              "legendFormat": "50th percentile",
+              "range": true,
+              "refId": "A"
+            },
+            {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "${DS_PROMETHEUS}"
+              },
+              "editorMode": "code",
+              "expr": "org_opennms_netmgt_telemetry_adapters_netflow_9_netflow_9_adapter_logparsing_75thpercentile{instance=~\"$instance\"}",
+              "hide": false,
+              "instant": false,
+              "legendFormat": "75th percentile",
+              "range": true,
+              "refId": "B"
+            },
+            {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "${prometheusDS}"
+              },
+              "editorMode": "code",
+              "expr": "org_opennms_netmgt_telemetry_adapters_netflow_9_netflow_9_adapter_logparsing_95thpercentile{instance=~\"$instance\"}",
+              "hide": false,
+              "instant": false,
+              "legendFormat": "95th percentile",
+              "range": true,
+              "refId": "C"
+            },
+            {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "${DS_PROMETHEUS}"
+              },
+              "editorMode": "code",
+              "expr": "org_opennms_netmgt_telemetry_adapters_netflow_9_netflow_9_adapter_logparsing_98thpercentile{instance=~\"$instance\"}",
+              "hide": false,
+              "instant": false,
+              "legendFormat": "98th percentile",
+              "range": true,
+              "refId": "D"
+            },
+            {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "${prometheusDS}"
+              },
+              "editorMode": "code",
+              "expr": "org_opennms_netmgt_telemetry_adapters_netflow_9_netflow_9_adapter_logparsing_99thpercentile{instance=~\"$instance\"}",
+              "hide": false,
+              "instant": false,
+              "legendFormat": "99th percentile",
+              "range": true,
+              "refId": "E"
+            },
+            {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "${DS_PROMETHEUS}"
+              },
+              "editorMode": "code",
+              "expr": "org_opennms_netmgt_telemetry_adapters_netflow_9_netflow_9_adapter_logparsing_999thpercentile{instance=~\"$instance\"}",
+              "hide": false,
+              "instant": false,
+              "legendFormat": "99.9th percentile",
+              "range": true,
+              "refId": "F"
+            }
+          ],
+          "title": "NetFlow v9 Log parsing statistics",
+          "type": "timeseries"
+        }
+      ],
+      "title": "OpenNMS - NetFlow v9",
+      "type": "row"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 60
+      },
+      "id": 50,
+      "panels": [],
+      "title": "OpenNMS - IPFIX",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${prometheusDS}"
+      },
+      "description": "Statistics about reception of IPFIX (NetFlow v10) messages on Telemetryd adapter.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "messages",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "points",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 4,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "dropped"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "semi-dark-red",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "received"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "yellow",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "parsed"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "converted"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "semi-dark-green",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 14,
+        "w": 12,
+        "x": 0,
+        "y": 61
+      },
+      "id": 64,
+      "options": {
+        "legend": {
+          "calcs": [
+            "p99",
+            "p98",
+            "p95",
+            "min",
+            "max"
+          ],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.1.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
+          },
+          "editorMode": "code",
+          "expr": "rate(org_opennms_netmgt_telemetry_adapters_ipfix_ipfix_adapter_entriesreceived_count{instance =~\"$instance\"}[1m])",
+          "instant": false,
+          "legendFormat": "received",
+          "range": true,
+          "refId": "A"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
+          },
+          "editorMode": "code",
+          "expr": "rate(org_opennms_netmgt_telemetry_adapters_ipfix_ipfix_adapter_entriesparsed_count{instance =~\"$instance\"}[1m])",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "parsed",
+          "range": true,
+          "refId": "B"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
+          },
+          "editorMode": "code",
+          "expr": "rate(org_opennms_netmgt_telemetry_adapters_ipfix_ipfix_adapter_entriesconverted_count{instance =~\"$instance\"}[1m])",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "converted",
+          "range": true,
+          "refId": "C"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${prometheusDS}"
+          },
+          "editorMode": "code",
+          "expr": "rate(org_opennms_core_ipc_sink_consumer_telemetry_ipfix_dropped_count{instance=~\"$instance\"}[1m])",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "dropped",
+          "range": true,
+          "refId": "D"
+        }
+      ],
+      "title": "IPFIX Reception Statistics",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${DS_PROMETHEUS}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "logs parsed",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 100,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 0,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "normal"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "50th percentile"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "purple",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "75th percentile"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "95th percentile"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "green",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "98th percentile"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "yellow",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "99th percentile"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "orange",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "99.9th percentile"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "red",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 14,
+        "w": 12,
+        "x": 12,
+        "y": 61
+      },
+      "id": 70,
+      "options": {
+        "legend": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.1.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${prometheusDS}"
+          },
+          "editorMode": "code",
+          "expr": "org_opennms_netmgt_telemetry_adapters_ipfix_ipfix_adapter_logparsing_50thpercentile{instance=~\"$instance\"}",
+          "instant": false,
+          "legendFormat": "50th percentile",
+          "range": true,
+          "refId": "A"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
+          },
+          "editorMode": "code",
+          "expr": "org_opennms_netmgt_telemetry_adapters_ipfix_ipfix_adapter_logparsing_75thpercentile{instance=~\"$instance\"}",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "75th percentile",
+          "range": true,
+          "refId": "B"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${prometheusDS}"
+          },
+          "editorMode": "code",
+          "expr": "org_opennms_netmgt_telemetry_adapters_ipfix_ipfix_adapter_logparsing_95thpercentile{instance=~\"$instance\"}",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "95th percentile",
+          "range": true,
+          "refId": "C"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
+          },
+          "editorMode": "code",
+          "expr": "org_opennms_netmgt_telemetry_adapters_ipfix_ipfix_adapter_logparsing_98thpercentile{instance=~\"$instance\"}",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "98th percentile",
+          "range": true,
+          "refId": "D"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${prometheusDS}"
+          },
+          "editorMode": "code",
+          "expr": "org_opennms_netmgt_telemetry_adapters_ipfix_ipfix_adapter_logparsing_99thpercentile{instance=~\"$instance\"}",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "99th percentile",
+          "range": true,
+          "refId": "E"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
+          },
+          "editorMode": "code",
+          "expr": "org_opennms_netmgt_telemetry_adapters_ipfix_ipfix_adapter_logparsing_999thpercentile{instance=~\"$instance\"}",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "99.9th percentile",
+          "range": true,
+          "refId": "F"
+        }
+      ],
+      "title": "IPFIX Log parsing statistics",
+      "type": "timeseries"
+    },
+    {
+      "collapsed": true,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 75
+      },
+      "id": 56,
+      "panels": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${prometheusDS}"
+          },
+          "description": "Statistics about reception of sFlow messages on Telemetryd adapter.",
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "palette-classic"
+              },
+              "custom": {
+                "axisBorderShow": false,
+                "axisCenteredZero": false,
+                "axisColorMode": "text",
+                "axisLabel": "messages",
+                "axisPlacement": "auto",
+                "barAlignment": 0,
+                "barWidthFactor": 0.6,
+                "drawStyle": "points",
+                "fillOpacity": 0,
+                "gradientMode": "none",
+                "hideFrom": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                },
+                "insertNulls": false,
+                "lineInterpolation": "linear",
+                "lineWidth": 1,
+                "pointSize": 4,
+                "scaleDistribution": {
+                  "type": "linear"
+                },
+                "showPoints": "never",
+                "spanNulls": false,
+                "stacking": {
+                  "group": "A",
+                  "mode": "none"
+                },
+                "thresholdsStyle": {
+                  "mode": "off"
+                }
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green",
+                    "value": 0
+                  },
+                  {
+                    "color": "red",
+                    "value": 80
+                  }
+                ]
+              },
+              "unit": "none"
+            },
+            "overrides": [
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "dropped"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "semi-dark-red",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "received"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "yellow",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "parsed"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "blue",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "converted"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "semi-dark-green",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "gridPos": {
+            "h": 14,
+            "w": 12,
+            "x": 0,
+            "y": 189
+          },
+          "id": 62,
+          "options": {
+            "legend": {
+              "calcs": [
+                "p99",
+                "p98",
+                "p95",
+                "min",
+                "max"
+              ],
+              "displayMode": "table",
+              "placement": "bottom",
+              "showLegend": true
+            },
+            "tooltip": {
+              "hideZeros": false,
+              "mode": "single",
+              "sort": "none"
+            }
+          },
+          "pluginVersion": "12.1.1",
+          "targets": [
+            {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "${DS_PROMETHEUS}"
+              },
+              "editorMode": "code",
+              "expr": "rate(org_opennms_netmgt_telemetry_adapters_sflow_sflow_adapter_entriesreceived_count{instance =~\"$instance\"}[1m])",
+              "instant": false,
+              "legendFormat": "received",
+              "range": true,
+              "refId": "A"
+            },
+            {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "${DS_PROMETHEUS}"
+              },
+              "editorMode": "code",
+              "expr": "rate(org_opennms_netmgt_telemetry_adapters_sflow_sflow_adapter_entriesparsed_count{instance =~\"$instance\"}[1m])",
+              "hide": false,
+              "instant": false,
+              "legendFormat": "parsed",
+              "range": true,
+              "refId": "B"
+            },
+            {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "${DS_PROMETHEUS}"
+              },
+              "editorMode": "code",
+              "expr": "rate(org_opennms_netmgt_telemetry_adapters_sflow_sflow_adapter_entriesconverted_count{instance =~\"$instance\"}[1m])",
+              "hide": false,
+              "instant": false,
+              "legendFormat": "converted",
+              "range": true,
+              "refId": "C"
+            },
+            {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "${prometheusDS}"
+              },
+              "editorMode": "code",
+              "expr": "rate(org_opennms_core_ipc_sink_consumer_telemetry_sflow_dropped_count{instance=~\"$instance\"}[1m])",
+              "hide": false,
+              "instant": false,
+              "legendFormat": "dropped",
+              "range": true,
+              "refId": "D"
+            }
+          ],
+          "title": "sFlow Reception Statistics",
+          "type": "timeseries"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
+          },
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "palette-classic"
+              },
+              "custom": {
+                "axisBorderShow": false,
+                "axisCenteredZero": false,
+                "axisColorMode": "text",
+                "axisLabel": "logs parsed",
+                "axisPlacement": "auto",
+                "barAlignment": 0,
+                "barWidthFactor": 0.6,
+                "drawStyle": "line",
+                "fillOpacity": 100,
+                "gradientMode": "none",
+                "hideFrom": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                },
+                "insertNulls": false,
+                "lineInterpolation": "linear",
+                "lineWidth": 0,
+                "pointSize": 5,
+                "scaleDistribution": {
+                  "type": "linear"
+                },
+                "showPoints": "auto",
+                "spanNulls": false,
+                "stacking": {
+                  "group": "A",
+                  "mode": "normal"
+                },
+                "thresholdsStyle": {
+                  "mode": "off"
+                }
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green",
+                    "value": 0
+                  },
+                  {
+                    "color": "red",
+                    "value": 80
+                  }
+                ]
+              }
+            },
+            "overrides": [
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "50th percentile"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "purple",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "75th percentile"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "blue",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "95th percentile"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "green",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "98th percentile"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "yellow",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "99th percentile"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "orange",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "99.9th percentile"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "red",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "gridPos": {
+            "h": 14,
+            "w": 12,
+            "x": 12,
+            "y": 189
+          },
+          "id": 63,
+          "options": {
+            "legend": {
+              "calcs": [
+                "lastNotNull"
+              ],
+              "displayMode": "table",
+              "placement": "bottom",
+              "showLegend": true
+            },
+            "tooltip": {
+              "hideZeros": false,
+              "mode": "single",
+              "sort": "none"
+            }
+          },
+          "pluginVersion": "12.1.1",
+          "targets": [
+            {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "${prometheusDS}"
+              },
+              "editorMode": "code",
+              "expr": "org_opennms_netmgt_telemetry_adapters_sflow_sflow_adapter_logparsing_50thpercentile{instance=~\"$instance\"}",
+              "instant": false,
+              "legendFormat": "50th percentile",
+              "range": true,
+              "refId": "A"
+            },
+            {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "${DS_PROMETHEUS}"
+              },
+              "editorMode": "code",
+              "expr": "org_opennms_netmgt_telemetry_adapters_sflow_sflow_adapter_logparsing_75thpercentile{instance=~\"$instance\"}",
+              "hide": false,
+              "instant": false,
+              "legendFormat": "75th percentile",
+              "range": true,
+              "refId": "B"
+            },
+            {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "${prometheusDS}"
+              },
+              "editorMode": "code",
+              "expr": "org_opennms_netmgt_telemetry_adapters_sflow_sflow_adapter_logparsing_95thpercentile{instance=~\"$instance\"}",
+              "hide": false,
+              "instant": false,
+              "legendFormat": "95th percentile",
+              "range": true,
+              "refId": "C"
+            },
+            {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "${DS_PROMETHEUS}"
+              },
+              "editorMode": "code",
+              "expr": "org_opennms_netmgt_telemetry_adapters_sflow_sflow_adapter_logparsing_98thpercentile{instance=~\"$instance\"}",
+              "hide": false,
+              "instant": false,
+              "legendFormat": "98th percentile",
+              "range": true,
+              "refId": "D"
+            },
+            {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "${prometheusDS}"
+              },
+              "editorMode": "code",
+              "expr": "org_opennms_netmgt_telemetry_adapters_sflow_sflow_adapter_logparsing_99thpercentile{instance=~\"$instance\"}",
+              "hide": false,
+              "instant": false,
+              "legendFormat": "99th percentile",
+              "range": true,
+              "refId": "E"
+            },
+            {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "${DS_PROMETHEUS}"
+              },
+              "editorMode": "code",
+              "expr": "org_opennms_netmgt_telemetry_adapters_sflow_sflow_adapter_logparsing_999thpercentile{instance=~\"$instance\"}",
+              "hide": false,
+              "instant": false,
+              "legendFormat": "99.9th percentile",
+              "range": true,
+              "refId": "F"
+            }
+          ],
+          "title": "sFlow Log parsing statistics",
+          "type": "timeseries"
+        }
+      ],
+      "title": "OpenNMS - sFlow",
+      "type": "row"
+    },
+    {
+      "collapsed": true,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 76
+      },
+      "id": 68,
+      "panels": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${prometheusDS}"
+          },
+          "description": "Statistics about reception of BMP messages on Telemetryd adapter.",
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "palette-classic"
+              },
+              "custom": {
+                "axisBorderShow": false,
+                "axisCenteredZero": false,
+                "axisColorMode": "text",
+                "axisLabel": "records",
+                "axisPlacement": "auto",
+                "barAlignment": 0,
+                "barWidthFactor": 0.6,
+                "drawStyle": "line",
+                "fillOpacity": 0,
+                "gradientMode": "none",
+                "hideFrom": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                },
+                "insertNulls": false,
+                "lineInterpolation": "linear",
+                "lineWidth": 1,
+                "pointSize": 4,
+                "scaleDistribution": {
+                  "type": "linear"
+                },
+                "showPoints": "never",
+                "spanNulls": false,
+                "stacking": {
+                  "group": "A",
+                  "mode": "none"
+                },
+                "thresholdsStyle": {
+                  "mode": "off"
+                }
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green",
+                    "value": 0
+                  },
+                  {
+                    "color": "red",
+                    "value": 80
+                  }
+                ]
+              },
+              "unit": "none"
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 14,
+            "w": 12,
+            "x": 0,
+            "y": 204
+          },
+          "id": 69,
+          "options": {
+            "legend": {
+              "calcs": [
+                "p99",
+                "p98",
+                "p95",
+                "min",
+                "max"
+              ],
+              "displayMode": "table",
+              "placement": "bottom",
+              "showLegend": true
+            },
+            "tooltip": {
+              "hideZeros": false,
+              "mode": "single",
+              "sort": "none"
+            }
+          },
+          "pluginVersion": "12.1.1",
+          "targets": [
+            {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "${DS_PROMETHEUS}"
+              },
+              "editorMode": "code",
+              "expr": "rate(org_opennms_netmgt_telemetry_adapters_bmp_bmp_peer_status_adapter_logparsing_count{instance=~\"$instance\"}[1m])",
+              "instant": false,
+              "legendFormat": "parsed",
+              "range": true,
+              "refId": "A"
+            },
+            {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "${DS_PROMETHEUS}"
+              },
+              "editorMode": "code",
+              "expr": "rate(org_opennms_netmgt_telemetry_adapters_bmp_bmp_peer_status_adapter_recordsconsumed_count{instance=~\"$instance\"}[1m])",
+              "hide": false,
+              "instant": false,
+              "legendFormat": "consumed",
+              "range": true,
+              "refId": "B"
+            }
+          ],
+          "title": "BMP Reception Statistics",
+          "type": "timeseries"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${prometheusDS}"
+          },
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "palette-classic"
+              },
+              "custom": {
+                "axisBorderShow": false,
+                "axisCenteredZero": false,
+                "axisColorMode": "text",
+                "axisLabel": "logs parsed",
+                "axisPlacement": "auto",
+                "barAlignment": 0,
+                "barWidthFactor": 0.6,
+                "drawStyle": "line",
+                "fillOpacity": 100,
+                "gradientMode": "none",
+                "hideFrom": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                },
+                "insertNulls": false,
+                "lineInterpolation": "linear",
+                "lineWidth": 0,
+                "pointSize": 5,
+                "scaleDistribution": {
+                  "type": "linear"
+                },
+                "showPoints": "auto",
+                "spanNulls": false,
+                "stacking": {
+                  "group": "A",
+                  "mode": "normal"
+                },
+                "thresholdsStyle": {
+                  "mode": "off"
+                }
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green",
+                    "value": 0
+                  },
+                  {
+                    "color": "red",
+                    "value": 80
+                  }
+                ]
+              }
+            },
+            "overrides": [
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "50th percentile"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "purple",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "75th percentile"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "blue",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "95th percentile"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "green",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "98th percentile"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "yellow",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "99th percentile"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "orange",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "99.9th percentile"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "red",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "gridPos": {
+            "h": 14,
+            "w": 12,
+            "x": 12,
+            "y": 204
+          },
+          "id": 65,
+          "options": {
+            "legend": {
+              "calcs": [
+                "lastNotNull"
+              ],
+              "displayMode": "table",
+              "placement": "bottom",
+              "showLegend": true
+            },
+            "tooltip": {
+              "hideZeros": false,
+              "mode": "single",
+              "sort": "none"
+            }
+          },
+          "pluginVersion": "12.1.1",
+          "targets": [
+            {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "${DS_PROMETHEUS}"
+              },
+              "editorMode": "code",
+              "expr": "org_opennms_netmgt_telemetry_adapters_bmp_bmp_peer_status_adapter_logparsing_50thpercentile{instance=~\"$instance\"}",
+              "instant": false,
+              "legendFormat": "50th percentile",
+              "range": true,
+              "refId": "A"
+            },
+            {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "${prometheusDS}"
+              },
+              "editorMode": "code",
+              "expr": "org_opennms_netmgt_telemetry_adapters_bmp_bmp_peer_status_adapter_logparsing_75thpercentile{instance=~\"$instance\"}",
+              "hide": false,
+              "instant": false,
+              "legendFormat": "75th percentile",
+              "range": true,
+              "refId": "B"
+            },
+            {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "${DS_PROMETHEUS}"
+              },
+              "editorMode": "code",
+              "expr": "org_opennms_netmgt_telemetry_adapters_bmp_bmp_peer_status_adapter_logparsing_95thpercentile{instance=~\"$instance\"}",
+              "hide": false,
+              "instant": false,
+              "legendFormat": "95th percentile",
+              "range": true,
+              "refId": "C"
+            },
+            {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "${prometheusDS}"
+              },
+              "editorMode": "code",
+              "expr": "org_opennms_netmgt_telemetry_adapters_bmp_bmp_peer_status_adapter_logparsing_98thpercentile{instance=~\"$instance\"}",
+              "hide": false,
+              "instant": false,
+              "legendFormat": "98th percentile",
+              "range": true,
+              "refId": "D"
+            },
+            {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "${DS_PROMETHEUS}"
+              },
+              "editorMode": "code",
+              "expr": "org_opennms_netmgt_telemetry_adapters_bmp_bmp_peer_status_adapter_logparsing_99thpercentile{instance=~\"$instance\"}",
+              "hide": false,
+              "instant": false,
+              "legendFormat": "99th percentile",
+              "range": true,
+              "refId": "E"
+            },
+            {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "${prometheusDS}"
+              },
+              "editorMode": "code",
+              "expr": "org_opennms_netmgt_telemetry_adapters_bmp_bmp_peer_status_adapter_logparsing_999thpercentile{instance=~\"$instance\"}",
+              "hide": false,
+              "instant": false,
+              "legendFormat": "99.9th percentile",
+              "range": true,
+              "refId": "F"
+            }
+          ],
+          "title": "BMP Log parsing statistics",
+          "type": "timeseries"
+        }
+      ],
+      "title": "OpenNMS - BGP Monitoring (BMP)",
       "type": "row"
     }
   ],
@@ -6015,6 +8307,6 @@
   "timezone": "browser",
   "title": "Prometheus: OpenNMS Core Internals",
   "uid": "37118f3c-3c63-451a-9692-c3dd43b854c0",
-  "version": 44,
+  "version": 116,
   "weekStart": ""
 }
