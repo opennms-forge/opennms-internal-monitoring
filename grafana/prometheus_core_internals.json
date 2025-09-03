@@ -57,7 +57,32 @@
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
   "id": null,
-  "links": [],
+  "links": [
+    {
+      "asDropdown": false,
+      "icon": "external link",
+      "includeVars": false,
+      "keepTime": false,
+      "tags": [],
+      "targetBlank": false,
+      "title": "GitHub",
+      "tooltip": "",
+      "type": "link",
+      "url": "https://github.com/opennms-forge/opennms-internal-monitoring"
+    },
+    {
+      "asDropdown": false,
+      "icon": "external link",
+      "includeVars": false,
+      "keepTime": false,
+      "tags": [],
+      "targetBlank": false,
+      "title": "Grafana Dashboard",
+      "tooltip": "",
+      "type": "link",
+      "url": "https://grafana.com/grafana/dashboards/23816"
+    }
+  ],
   "panels": [
     {
       "collapsed": false,
@@ -5861,7 +5886,7 @@
             "h": 10,
             "w": 12,
             "x": 0,
-            "y": 72
+            "y": 81
           },
           "id": 35,
           "options": {
@@ -6033,7 +6058,7 @@
             "h": 10,
             "w": 12,
             "x": 12,
-            "y": 72
+            "y": 81
           },
           "id": 36,
           "options": {
@@ -6399,7 +6424,7 @@
             "h": 14,
             "w": 8,
             "x": 0,
-            "y": 73
+            "y": 82
           },
           "id": 57,
           "options": {
@@ -6634,7 +6659,7 @@
             "h": 14,
             "w": 8,
             "x": 8,
-            "y": 73
+            "y": 82
           },
           "id": 61,
           "options": {
@@ -6891,7 +6916,7 @@
             "h": 14,
             "w": 8,
             "x": 16,
-            "y": 73
+            "y": 82
           },
           "id": 87,
           "options": {
@@ -7133,7 +7158,7 @@
             "h": 14,
             "w": 8,
             "x": 0,
-            "y": 74
+            "y": 83
           },
           "id": 66,
           "options": {
@@ -7368,7 +7393,7 @@
             "h": 14,
             "w": 8,
             "x": 8,
-            "y": 74
+            "y": 83
           },
           "id": 67,
           "options": {
@@ -7625,7 +7650,7 @@
             "h": 14,
             "w": 8,
             "x": 16,
-            "y": 74
+            "y": 83
           },
           "id": 91,
           "options": {
@@ -7867,7 +7892,7 @@
             "h": 14,
             "w": 8,
             "x": 0,
-            "y": 75
+            "y": 84
           },
           "id": 64,
           "options": {
@@ -8102,7 +8127,7 @@
             "h": 14,
             "w": 8,
             "x": 8,
-            "y": 75
+            "y": 84
           },
           "id": 70,
           "options": {
@@ -8359,7 +8384,7 @@
             "h": 14,
             "w": 8,
             "x": 16,
-            "y": 75
+            "y": 84
           },
           "id": 88,
           "options": {
@@ -8601,7 +8626,7 @@
             "h": 14,
             "w": 8,
             "x": 0,
-            "y": 76
+            "y": 85
           },
           "id": 62,
           "options": {
@@ -8836,7 +8861,7 @@
             "h": 14,
             "w": 8,
             "x": 8,
-            "y": 76
+            "y": 85
           },
           "id": 63,
           "options": {
@@ -9093,7 +9118,7 @@
             "h": 14,
             "w": 8,
             "x": 16,
-            "y": 76
+            "y": 85
           },
           "id": 89,
           "options": {
@@ -9274,7 +9299,7 @@
             "h": 14,
             "w": 8,
             "x": 0,
-            "y": 77
+            "y": 86
           },
           "id": 69,
           "options": {
@@ -9483,7 +9508,7 @@
             "h": 14,
             "w": 8,
             "x": 8,
-            "y": 77
+            "y": 86
           },
           "id": 65,
           "options": {
@@ -9740,7 +9765,7 @@
             "h": 14,
             "w": 8,
             "x": 16,
-            "y": 77
+            "y": 86
           },
           "id": 90,
           "options": {
@@ -9891,6 +9916,6 @@
   "timezone": "browser",
   "title": "Prometheus: OpenNMS Core Internals",
   "uid": "42118f3c-3c63-451a-9692-c3dd43b854c0",
-  "version": 106,
+  "version": 108,
   "weekStart": ""
 }
