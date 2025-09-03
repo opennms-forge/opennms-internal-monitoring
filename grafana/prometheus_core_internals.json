@@ -66,7 +66,7 @@
       "tags": [],
       "targetBlank": false,
       "title": "GitHub",
-      "tooltip": "",
+      "tooltip": "Dashboard source code repository on GitHub",
       "type": "link",
       "url": "https://github.com/opennms-forge/opennms-internal-monitoring"
     },
@@ -78,7 +78,7 @@
       "tags": [],
       "targetBlank": false,
       "title": "Grafana Dashboard",
-      "tooltip": "",
+      "tooltip": "Published dashboard on Grafana",
       "type": "link",
       "url": "https://grafana.com/grafana/dashboards/23816"
     }
@@ -5886,7 +5886,7 @@
             "h": 10,
             "w": 12,
             "x": 0,
-            "y": 81
+            "y": 90
           },
           "id": 35,
           "options": {
@@ -6058,7 +6058,7 @@
             "h": 10,
             "w": 12,
             "x": 12,
-            "y": 81
+            "y": 90
           },
           "id": 36,
           "options": {
@@ -6424,7 +6424,7 @@
             "h": 14,
             "w": 8,
             "x": 0,
-            "y": 82
+            "y": 91
           },
           "id": 57,
           "options": {
@@ -6659,7 +6659,7 @@
             "h": 14,
             "w": 8,
             "x": 8,
-            "y": 82
+            "y": 91
           },
           "id": 61,
           "options": {
@@ -6916,7 +6916,7 @@
             "h": 14,
             "w": 8,
             "x": 16,
-            "y": 82
+            "y": 91
           },
           "id": 87,
           "options": {
@@ -7158,7 +7158,7 @@
             "h": 14,
             "w": 8,
             "x": 0,
-            "y": 83
+            "y": 92
           },
           "id": 66,
           "options": {
@@ -7393,7 +7393,7 @@
             "h": 14,
             "w": 8,
             "x": 8,
-            "y": 83
+            "y": 92
           },
           "id": 67,
           "options": {
@@ -7650,7 +7650,7 @@
             "h": 14,
             "w": 8,
             "x": 16,
-            "y": 83
+            "y": 92
           },
           "id": 91,
           "options": {
@@ -7892,7 +7892,7 @@
             "h": 14,
             "w": 8,
             "x": 0,
-            "y": 84
+            "y": 93
           },
           "id": 64,
           "options": {
@@ -8127,7 +8127,7 @@
             "h": 14,
             "w": 8,
             "x": 8,
-            "y": 84
+            "y": 93
           },
           "id": 70,
           "options": {
@@ -8384,7 +8384,7 @@
             "h": 14,
             "w": 8,
             "x": 16,
-            "y": 84
+            "y": 93
           },
           "id": 88,
           "options": {
@@ -8626,7 +8626,7 @@
             "h": 14,
             "w": 8,
             "x": 0,
-            "y": 85
+            "y": 94
           },
           "id": 62,
           "options": {
@@ -8861,7 +8861,7 @@
             "h": 14,
             "w": 8,
             "x": 8,
-            "y": 85
+            "y": 94
           },
           "id": 63,
           "options": {
@@ -9118,7 +9118,7 @@
             "h": 14,
             "w": 8,
             "x": 16,
-            "y": 85
+            "y": 94
           },
           "id": 89,
           "options": {
@@ -9299,7 +9299,7 @@
             "h": 14,
             "w": 8,
             "x": 0,
-            "y": 86
+            "y": 95
           },
           "id": 69,
           "options": {
@@ -9508,7 +9508,7 @@
             "h": 14,
             "w": 8,
             "x": 8,
-            "y": 86
+            "y": 95
           },
           "id": 65,
           "options": {
@@ -9765,7 +9765,7 @@
             "h": 14,
             "w": 8,
             "x": 16,
-            "y": 86
+            "y": 95
           },
           "id": 90,
           "options": {
@@ -9916,6 +9916,6 @@
   "timezone": "browser",
   "title": "Prometheus: OpenNMS Core Internals",
   "uid": "42118f3c-3c63-451a-9692-c3dd43b854c0",
-  "version": 108,
+  "version": 110,
   "weekStart": ""
 }
